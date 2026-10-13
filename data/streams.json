@@ -1,49 +1,69 @@
 {
-  "version": 1,
+  "version": 2,
   "platforms": [
+    "Apple Music",
     "Spotify",
-    "YouTube",
-    "Apple Music"
+    "YouTube"
   ],
   "tracks": {
     "naar-lyset-slukker": {
-      "streams": null,
+      "am": null,
+      "sp": null,
+      "yt": null,
       "updatedAt": null
     },
     "stadig-her": {
-      "streams": null,
+      "am": null,
+      "sp": null,
+      "yt": null,
       "updatedAt": null
     },
     "bliv-i-nat": {
-      "streams": null,
+      "am": null,
+      "sp": null,
+      "yt": null,
       "updatedAt": null
     },
     "nav-dile-min": {
-      "streams": null,
+      "am": null,
+      "sp": null,
+      "yt": null,
       "updatedAt": null
     },
     "ya-layali": {
-      "streams": null,
+      "am": null,
+      "sp": null,
+      "yt": null,
       "updatedAt": null
     },
     "cest-la-vie": {
-      "streams": null,
+      "am": null,
+      "sp": null,
+      "yt": null,
       "updatedAt": null
     },
     "jeg-sagde-det-fint": {
-      "streams": null,
+      "am": null,
+      "sp": null,
+      "yt": null,
       "updatedAt": null
     },
     "yine": {
-      "streams": null,
+      "am": null,
+      "sp": null,
+      "yt": null,
       "updatedAt": null
     },
     "efter-solnedgang": {
-      "streams": null,
+      "am": null,
+      "sp": null,
+      "yt": null,
       "updatedAt": null
     },
     "seven-direj": {
-      "streams": null,
+      "am": null,
+      "sp": null,
+      "yt": null,
       "updatedAt": null
     }
   }

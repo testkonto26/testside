@@ -37,6 +37,24 @@ button:disabled{opacity:.48;cursor:wait}
 @media(max-width:600px){.wrap{width:calc(100% - 32px)}.nav{min-height:70px}.brand{font-size:11px;letter-spacing:.19em}.back{font-size:11px;padding:10px 13px}main{padding:49px 0 68px}h1{font-size:47px}.lead{font-size:13px}.card{padding:24px 19px;border-radius:17px}.song-row{grid-template-columns:minmax(0,1fr) 126px;gap:10px}.song-info label{font-size:14px}.song-row input{font-size:14px;padding:0 9px}.song-row input::placeholder{font-size:10px}.actions button{flex:1;padding:0 12px;font-size:11px}}
 @media(max-width:360px){.song-row{grid-template-columns:minmax(0,1fr) 111px}.song-info label{font-size:13px}.brand{font-size:10px}}
 @media(prefers-reduced-motion:reduce){button{transition:none}}
+
+/* Three platforms per song, with a live combined total. */
+.song-row{grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:24px;padding:23px 0}
+.song-info{gap:8px}
+.song-name{font-size:17px;line-height:1.35;letter-spacing:-.035em}
+.song-total{display:block;color:var(--gold-light);font-size:13px;font-weight:750;line-height:1.5}
+.song-inputs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;min-width:0}
+.platform-field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.platform-label{color:var(--gold-light);font-size:11px;font-weight:800;letter-spacing:.14em}
+.song-inputs input{min-width:0;width:100%;height:49px;padding:0 10px;text-align:center;font-size:15px}
+@media(max-width:650px){
+.song-row{grid-template-columns:minmax(0,1fr);gap:16px;padding:22px 0}
+.song-name{font-size:16px}
+.song-info{gap:6px}
+.song-inputs{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.song-inputs input{height:47px;font-size:14px;padding:0 7px}
+}
+@media(max-width:370px){.song-inputs{gap:7px}.song-name{font-size:15px}}
 </style>
 <script src="../assets/admin.js" defer></script>
 </head><body>
@@ -44,7 +62,7 @@ button:disabled{opacity:.48;cursor:wait}
 <main><div class="wrap">
 <div class="eyebrow">SYNQ STUDIOS / ADMIN</div>
 <h1>Administrer<br>streams<span style="color:var(--gold)">.</span></h1>
-<p class="lead">Opdater det samlede antal streams for hver sang. Tallene vises på forsiden og under Udgivelser sammen med datoen for seneste ændring.</p>
+<p class="lead">Indtast streams fra Apple Music, Spotify og YouTube hver for sig. Adminpanelet lægger automatisk de tre tal sammen for hver sang.</p>
 <form id="stream-form" autocomplete="off">
 <section class="card" aria-labelledby="access-title">
 <h2 id="access-title">GitHub-adgang</h2>
@@ -55,7 +73,7 @@ button:disabled{opacity:.48;cursor:wait}
 </section>
 <section class="card" aria-labelledby="songs-title">
 <h2 id="songs-title">Alle udgivelser</h2>
-<p class="hint">Indtast det samlede antal for <strong>Spotify, YouTube og Apple Music</strong>. Skriv kun tal uden punktummer. Et tomt felt betyder, at der endnu ikke er angivet streams. Opdateringsdatoen sættes automatisk, når du ændrer et tal.</p>
+<p class="hint"><strong>AM</strong> = Apple Music · <strong>SP</strong> = Spotify · <strong>YT</strong> = YouTube. Indtast det samlede antal afspilninger fra hver platform. Totalen beregnes med det samme. Tomme felter tæller som 0; hvis alle tre er tomme, vises ingen total offentligt. Opdateringsdatoen ændres, når du gemmer.</p>
 <div id="stream-fields" class="song-list"></div>
 <div class="actions"><button id="save" class="primary" type="submit" disabled>Gem ændringer</button><button id="reload" class="secondary" type="button">Genindlæs tal</button></div>
 <p id="status" role="status" aria-live="polite">Henter de aktuelle tal…</p>
