@@ -22,6 +22,18 @@ a{color:inherit;text-decoration:none}.wrap{width:min(1050px,calc(100% - 60px));m
 .draft-panel h2{font-size:clamp(26px,4vw,37px);line-height:1.2;letter-spacing:-.055em;margin:22px 0 14px}
 .draft-panel p{font-size:15px;line-height:1.8;color:#a9a59d;max-width:560px;margin:0}
 .draft-link{display:inline-flex;align-items:center;gap:8px;margin-top:30px;color:var(--gold-light);font-size:12px;letter-spacing:.08em;font-weight:700}.draft-link:hover{color:#fff}
+/* About SYNQ: editorial layout with understated gold details. */
+.about-content{padding:78px 0 108px}
+.about-story{max-width:800px;margin:0 auto}
+.about-story h2{font-size:clamp(36px,6vw,60px);line-height:1.1;letter-spacing:-.065em;margin:19px 0 24px;font-weight:800}
+.about-lead{font-size:clamp(17px,2.3vw,20px);line-height:1.9;color:#e1dcd3;max-width:760px;margin:0}
+.about-rule{height:1px;background:var(--line);margin:46px 0 0}
+.about-section{margin-top:42px}
+.about-section h3{font-size:clamp(22px,3vw,28px);line-height:1.3;letter-spacing:-.04em;margin:0 0 19px;color:var(--white)}
+.about-section p{font-size:16px;line-height:1.9;color:#b7b2a9;margin:0 0 18px;max-width:760px}
+.about-quote{border-left:2px solid var(--gold);margin:49px 0 6px;padding:7px 0 7px 24px;color:var(--gold-light);font-size:clamp(19px,3vw,27px);line-height:1.55;letter-spacing:-.03em;font-weight:700}
+.about-content .draft-link{margin-top:34px}
+@media(max-width:650px){.about-content{padding:49px 0 77px}.about-story h2{font-size:clamp(35px,9vw,46px);margin:16px 0 21px}.about-lead{font-size:16px;line-height:1.85}.about-rule{margin-top:35px}.about-section{margin-top:34px}.about-section h3{font-size:22px;margin-bottom:14px}.about-section p{font-size:14px;line-height:1.85}.about-quote{padding-left:18px;margin-top:39px;font-size:20px}}
 .section-head{display:flex;justify-content:space-between;gap:12px;padding:0 0 20px;border-bottom:1px solid var(--line);color:var(--gold);font-size:10px;letter-spacing:.16em;font-weight:700}
 .track-list{display:block}
 .track{width:100%;text-align:left;cursor:pointer;color:var(--white);border-bottom:1px solid var(--line);display:grid;grid-template-columns:78px minmax(0,1fr) auto;align-items:center;gap:18px;padding:12px 10px;min-height:105px;transition:background .2s}
