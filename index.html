@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#080807">
-<meta name="description" content="SYNQ STUDIOS — musik uden grænser. Hør alle 10 udgivelser, se originale covers, og find musikken på Apple Music, Spotify, YouTube Music og TIDAL.">
+<meta name="description" content="SYNQ STUDIOS — originale udgivelser. Hør alle 10 udgivelser, se originale covers, og find musikken på Apple Music, Spotify, YouTube Music og TIDAL.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="SYNQ STUDIOS — Musik uden grænser">
-<meta property="og:description" content="Udgivelser, musik og historier på tværs af sprog. Oplev SYNQ STUDIOS.">
+<meta property="og:title" content="SYNQ STUDIOS — Officielle udgivelser">
+<meta property="og:description" content="Udforsk de seneste udgivelser fra SYNQ STUDIOS, og lyt på dine foretrukne musiktjenester.">
 <meta property="og:image" content="https://testkonto26.github.io/testside/assets/naar-lyset-slukker.webp">
-<title>SYNQ STUDIOS — Musik uden grænser</title>
+<title>SYNQ STUDIOS — Officielle udgivelser</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -28,18 +28,19 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 .navlinks{display:flex;align-items:center;gap:25px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d6d1c8}
 .navlinks a:hover{color:var(--gold-light)}
 .navcta{border:1px solid rgba(201,169,109,.45);border-radius:999px;padding:11px 17px;color:var(--gold-light)}
-.hero{position:relative;overflow:hidden;min-height:545px;display:flex;align-items:center;background:radial-gradient(ellipse at 80% 43%,rgba(169,131,72,.15),transparent 37%),linear-gradient(110deg,#080807,#11100e)}
-.hero:after{content:"";position:absolute;width:min(56vw,630px);aspect-ratio:1;border:1px solid rgba(201,169,109,.17);border-radius:50%;right:-8%;top:50%;transform:translateY(-50%);box-shadow:0 0 0 55px rgba(201,169,109,.025),0 0 0 110px rgba(201,169,109,.018);pointer-events:none}
-.hero-copy{position:relative;z-index:1;padding:96px 0;max-width:670px}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 78% 40%,rgba(201,169,109,.095),transparent 43%),linear-gradient(115deg,#080807,#11100e)}
+.hero:before{content:"";position:absolute;right:-12%;top:-55%;width:520px;height:520px;border:1px solid rgba(201,169,109,.12);border-radius:50%;pointer-events:none}
+.hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 260px;align-items:center;gap:52px;padding:64px 0}
+.hero-copy{min-width:0}
 .eyebrow{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:700}
-.hero h1{font-size:clamp(58px,9vw,103px);font-weight:800;line-height:.96;letter-spacing:-.066em;margin:21px 0 26px}
-.hero h1 span{font-style:italic;color:var(--gold-light)}
-.hero p{max-width:470px;color:#b9b4ac;font-size:15px;line-height:1.82;margin:0}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.button{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:0 24px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.045em;transition:transform .2s,background .2s}
-.button:hover{transform:translateY(-2px)}
-.button.gold{background:var(--gold);color:#13110c;border:1px solid var(--gold)}
-.button.outline{border:1px solid rgba(201,169,109,.44);color:var(--gold-light)}
+.hero h1{font-size:clamp(48px,6vw,72px);font-weight:800;line-height:1.05;letter-spacing:-.065em;margin:18px 0 16px}
+.hero p{font-size:12px;letter-spacing:.16em;color:#aaa59b;margin:0;font-weight:600}
+.hero-listen{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:46px;padding:0 24px;border:1px solid var(--gold);border-radius:999px;color:var(--gold-light);font-size:13px;font-weight:800;letter-spacing:.16em;margin-top:27px;transition:background .2s,color .2s,transform .2s}
+.hero-listen:hover{background:var(--gold);color:#111;transform:translateY(-2px)}
+.hero-listen:focus-visible,.hero-art:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
+.hero-art{display:block;width:260px;aspect-ratio:1;border-radius:18px;overflow:hidden;border:1px solid rgba(201,169,109,.26);box-shadow:0 22px 65px rgba(0,0,0,.46);transition:transform .25s,border-color .25s}
+.hero-art:hover{transform:translateY(-3px);border-color:var(--gold)}
+.hero-art img{display:block;width:100%;height:100%;object-fit:cover}
 .releases-section{padding:85px 0 96px}
 .release-heading{padding-bottom:42px;border-bottom:1px solid var(--line)}
 .release-heading h2,.section-heading h2{font-size:clamp(43px,7vw,67px);line-height:1;letter-spacing:-.055em;font-weight:800;margin:15px 0 19px}
@@ -49,20 +50,20 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 .track:hover{background:rgba(255,255,255,.027)}
 .track:visited{color:var(--white)}
 .track:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.track.featured{margin-top:2px;grid-template-columns:112px minmax(0,1fr) auto;gap:24px;min-height:166px;padding:19px 20px;border:2px solid var(--gold);border-radius:19px;background:linear-gradient(110deg,rgba(201,169,109,.085),rgba(201,169,109,.018) 60%,transparent);box-shadow:0 0 0 1px rgba(201,169,109,.05)}
+
 .cover{display:block;width:74px;aspect-ratio:1;overflow:hidden;border-radius:10px;background:#171715;box-shadow:0 0 0 1px rgba(255,255,255,.09)}
-.track.featured .cover{width:104px;border-radius:11px}
+
 .cover img{display:block;width:100%;height:100%;object-fit:cover}
 .track-copy{display:flex;flex-direction:column;gap:7px;min-width:0}
-.track.featured .track-copy{gap:11px}
+
 .track-title{display:block;font-size:clamp(16px,2vw,21px);line-height:1.18;font-weight:700;letter-spacing:-.035em}
-.track.featured .track-title{font-size:clamp(19px,2.6vw,27px)}
+
 .track-meta{color:var(--muted);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.65}
-.track.featured .track-meta{font-size:11px}
-.track-meta.latest{color:var(--gold-light);font-weight:800}
+
+
 .release-date{font-size:10px;letter-spacing:.06em;opacity:.75;text-transform:none}
 .listen{display:inline-flex;align-items:center;gap:6px;color:var(--gold-light);font-size:12px;font-weight:800;letter-spacing:.16em;white-space:nowrap;padding:14px 4px 14px 14px}
-.track.featured .listen{font-size:13px}
+
 .track:hover .listen{color:#f2d8a4}
 /* Vector-like CSS arrow: no emoji glyphs, identical on iOS and desktop. */
 .arrow-icon{position:relative;display:inline-block;flex:0 0 13px;width:13px;height:13px;vertical-align:middle;margin-left:2px;color:inherit;letter-spacing:0}
@@ -90,14 +91,14 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 @media(max-width:760px){.video-grid{grid-template-columns:1fr}.social-grid{grid-template-columns:1fr}.social-card{min-height:100px;flex-direction:row;align-items:center}.social-card strong{font-size:21px}}
 @media(max-width:650px){
 .wrap{width:calc(100% - 36px)}.topbar{height:68px}.brand{font-size:12px;letter-spacing:.24em}.navlinks{gap:12px;font-size:9px}.navlinks a:first-child{display:none}.navcta{padding:9px 12px}
-.hero{min-height:min(570px,calc(80svh - 68px))}.hero-copy{padding:75px 0 65px}.hero:after{width:94vw;right:-50%;top:38%}
-.hero h1{font-size:clamp(53px,14vw,76px)}.hero p{font-size:13px;max-width:335px}.button{font-size:10px;padding:0 17px;min-height:43px}
+.hero-inner{grid-template-columns:minmax(0,1fr) 128px;gap:15px;padding:43px 0 46px}.hero:before{width:320px;height:320px;right:-55%;top:-20%}
+.hero .eyebrow{font-size:9px;letter-spacing:.11em;line-height:1.6}.hero h1{font-size:clamp(27px,7.5vw,36px);line-height:1.1;margin:12px 0 11px}.hero p{font-size:10px}.hero-listen{min-height:39px;padding:0 20px;margin-top:20px;font-size:11px;gap:9px}.hero-art{width:128px;border-radius:12px}
 .releases-section{padding:58px 0 68px}.release-heading{padding-bottom:31px}.release-heading h2,.section-heading h2{font-size:clamp(40px,11vw,56px)}.release-heading p{font-size:13px}
-.track{grid-template-columns:61px minmax(0,1fr) auto;min-height:86px;gap:12px;padding:9px 3px}.track.featured{grid-template-columns:74px minmax(0,1fr) auto;min-height:119px;gap:13px;padding:13px 10px;border-radius:15px}
-.cover{width:59px;border-radius:9px}.track.featured .cover{width:72px;border-radius:10px}.track-title{font-size:15px;line-height:1.18}.track.featured .track-title{font-size:17px}.track-copy{gap:6px}.track.featured .track-copy{gap:8px}.track-meta{font-size:9px;letter-spacing:.11em}.release-date{display:none}.listen{font-size:11px;letter-spacing:.1em;padding:8px 0 8px 4px}
+.track{grid-template-columns:61px minmax(0,1fr) auto;min-height:86px;gap:12px;padding:9px 3px}
+.cover{width:59px;border-radius:9px}.track-title{font-size:15px;line-height:1.18}.track-copy{gap:6px}.track-meta{font-size:9px;letter-spacing:.11em}.release-date{display:none}.listen{font-size:11px;letter-spacing:.1em;padding:8px 0 8px 4px}
 .video-section{padding:58px 0 64px}.video-caption{padding:16px}.follow{padding:65px 0}.social-card{padding:20px}.footer-row{align-items:flex-start;flex-direction:column}
 }
-@media(max-width:370px){.wrap{width:calc(100% - 28px)}.track{grid-template-columns:55px minmax(0,1fr) auto;gap:9px}.track.featured{grid-template-columns:62px minmax(0,1fr) auto;gap:9px;padding-inline:8px}.cover{width:52px}.track.featured .cover{width:60px}.track-title{font-size:14px}.track.featured .track-title{font-size:15px}.track-meta{font-size:8px}.listen{font-size:10px}}
+@media(max-width:370px){.wrap{width:calc(100% - 28px)}.hero-inner{grid-template-columns:minmax(0,1fr) 108px;gap:12px}.hero-art{width:108px}.hero h1{font-size:27px}.track{grid-template-columns:55px minmax(0,1fr) auto;gap:9px}.cover{width:52px}.track-title{font-size:14px}.track-meta{font-size:8px}.listen{font-size:10px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -108,17 +109,20 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 <nav class="navlinks" aria-label="Hovedmenu"><a href="#udgivelser">Udgivelser</a><a href="#videoer">Videoer</a><a class="navcta" href="#foelg">Følg os</a></nav>
 </div></header>
 <main id="top">
-<section class="hero" aria-labelledby="hero-title"><div class="wrap"><div class="hero-copy">
-<div class="eyebrow">Independent sound · Est. 2026</div>
-<h1 id="hero-title">Musik uden<br><span>grænser.</span></h1>
-<p>Et univers af melodier, stemninger og historier på tværs af sprog og kulturer. Velkommen til SYNQ STUDIOS.</p>
-<div class="hero-actions"><a class="button gold" href="#udgivelser">Udforsk udgivelser</a><a class="button outline" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer">Besøg YouTube <span class="arrow-icon" aria-hidden="true"></span></a></div>
+<section class="hero" aria-labelledby="hero-title"><div class="wrap"><div class="hero-inner">
+<div class="hero-copy">
+<div class="eyebrow">Seneste udgivelse · 13. oktober 2026</div>
+<h1 id="hero-title">Når Lyset<br>Slukker</h1>
+<p>SYNQ STUDIOS</p>
+<a class="hero-listen" href="sange/naar-lyset-slukker/" aria-label="Lyt til Når Lyset Slukker">LYT <span class="arrow-icon" aria-hidden="true"></span></a>
+</div>
+<a class="hero-art" href="sange/naar-lyset-slukker/" aria-label="Åbn Når Lyset Slukker"><img src="assets/naar-lyset-slukker.webp" alt="Cover til Når Lyset Slukker" width="520" height="520" fetchpriority="high" decoding="async"></a>
 </div></div></section>
 <section class="releases-section" id="udgivelser" aria-labelledby="releases-title"><div class="wrap">
 <div class="release-heading"><div class="eyebrow">SYNQ STUDIOS · 2026</div><h2 id="releases-title">Udgivelser</h2><p>10 udgivelser · 2026</p></div>
-<div class="track-list"><a class="track featured" href="sange/naar-lyset-slukker/" aria-label="Åbn sangsiden for Når Lyset Slukker">
-<span class="cover"><img src="assets/naar-lyset-slukker.webp" alt="Cover til Når Lyset Slukker" width="112" height="112" fetchpriority="high" decoding="async"></span>
-<span class="track-copy"><span class="track-title">Når Lyset Slukker</span><span class="track-meta latest">SENESTE UDGIVELSE<span class="release-date"> · 13. oktober 2026</span></span></span>
+<div class="track-list"><a class="track" href="sange/naar-lyset-slukker/" aria-label="Åbn sangsiden for Når Lyset Slukker">
+<span class="cover"><img src="assets/naar-lyset-slukker.webp" alt="Cover til Når Lyset Slukker" width="112" height="112" loading="lazy" decoding="async"></span>
+<span class="track-copy"><span class="track-title">Når Lyset Slukker</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 13. oktober 2026</span></span></span>
 <span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
 </a>
 <a class="track" href="sange/stadig-her/" aria-label="Åbn sangsiden for Stadig her">
@@ -183,5 +187,5 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 </div>
 </div></section>
 </main>
-<footer class="footer"><div class="wrap footer-row"><span>© 2026 SYNQ STUDIOS</span><strong>MUSIK UDEN GRÆNSER</strong></div></footer>
+<footer class="footer"><div class="wrap footer-row"><span>© 2026 SYNQ STUDIOS</span><strong>INDEPENDENT SOUND</strong></div></footer>
 </body></html>
