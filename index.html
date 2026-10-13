@@ -12,10 +12,10 @@
 <title>SYNQ STUDIOS — Musik uden grænser</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="preload" href="assets/naar-lyset-slukker.webp" as="image">
 <style>
-:root{color-scheme:dark;--black:#080807;--black2:#10100e;--white:#f5f2eb;--muted:#888680;--gold:#c9a96d;--gold-light:#d9be8b;--line:#2b2a27;--font:"DM Sans",Arial,sans-serif}
+:root{color-scheme:dark;--black:#080807;--black2:#10100e;--white:#f5f2eb;--muted:#888680;--gold:#c9a96d;--gold-light:#d9be8b;--line:#2b2a27;--font:"Inter",Arial,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px;background:var(--black)}
 body{margin:0;background:var(--black);color:var(--white);font-family:var(--font);-webkit-font-smoothing:antialiased}
@@ -45,19 +45,29 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 .release-heading h2,.section-heading h2{font-size:clamp(43px,7vw,67px);line-height:1;letter-spacing:-.055em;font-weight:800;margin:15px 0 19px}
 .release-heading p,.section-heading p{color:var(--muted);font-size:15px;line-height:1.7;margin:0}
 .track-list{display:block}
-.track{width:100%;appearance:none;text-align:left;cursor:pointer;color:var(--white);border:0;border-bottom:1px solid var(--line);background:transparent;display:grid;grid-template-columns:112px minmax(0,1fr) auto;align-items:center;gap:24px;padding:19px 12px;min-height:144px;transition:background .2s}
+.track{width:100%;appearance:none;text-align:left;cursor:pointer;color:var(--white);border:0;border-bottom:1px solid var(--line);background:transparent;display:grid;grid-template-columns:78px minmax(0,1fr) auto;align-items:center;gap:18px;padding:12px 10px;min-height:105px;transition:background .2s}
 .track:hover{background:rgba(255,255,255,.027)}
 .track:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.track.featured{margin-top:2px;min-height:166px;padding:19px 20px;border:2px solid var(--gold);border-radius:19px;background:linear-gradient(110deg,rgba(201,169,109,.085),rgba(201,169,109,.018) 60%,transparent);box-shadow:0 0 0 1px rgba(201,169,109,.05)}
-.cover{display:block;width:104px;aspect-ratio:1;overflow:hidden;border-radius:11px;background:#171715;box-shadow:0 0 0 1px rgba(255,255,255,.09)}
+.track.featured{margin-top:2px;grid-template-columns:112px minmax(0,1fr) auto;gap:24px;min-height:166px;padding:19px 20px;border:2px solid var(--gold);border-radius:19px;background:linear-gradient(110deg,rgba(201,169,109,.085),rgba(201,169,109,.018) 60%,transparent);box-shadow:0 0 0 1px rgba(201,169,109,.05)}
+.cover{display:block;width:74px;aspect-ratio:1;overflow:hidden;border-radius:10px;background:#171715;box-shadow:0 0 0 1px rgba(255,255,255,.09)}
+.track.featured .cover{width:104px;border-radius:11px}
 .cover img{display:block;width:100%;height:100%;object-fit:cover}
-.track-copy{display:flex;flex-direction:column;gap:11px;min-width:0}
-.track-title{display:block;font-size:clamp(19px,2.6vw,27px);line-height:1.18;font-weight:700;letter-spacing:-.035em}
-.track-meta{color:var(--muted);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.65}
+.track-copy{display:flex;flex-direction:column;gap:7px;min-width:0}
+.track.featured .track-copy{gap:11px}
+.track-title{display:block;font-size:clamp(16px,2vw,21px);line-height:1.18;font-weight:700;letter-spacing:-.035em}
+.track.featured .track-title{font-size:clamp(19px,2.6vw,27px)}
+.track-meta{color:var(--muted);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.65}
+.track.featured .track-meta{font-size:11px}
 .track-meta.latest{color:var(--gold-light);font-weight:800}
 .release-date{font-size:10px;letter-spacing:.06em;opacity:.75;text-transform:none}
-.listen{display:inline-flex;align-items:center;gap:6px;color:var(--gold-light);font-size:13px;font-weight:800;letter-spacing:.16em;white-space:nowrap;padding:14px 4px 14px 14px}
+.listen{display:inline-flex;align-items:center;gap:6px;color:var(--gold-light);font-size:12px;font-weight:800;letter-spacing:.16em;white-space:nowrap;padding:14px 4px 14px 14px}
+.track.featured .listen{font-size:13px}
 .track:hover .listen{color:#f2d8a4}
+/* Vector-like CSS arrow: no emoji glyphs, identical on iOS and desktop. */
+.arrow-icon{position:relative;display:inline-block;flex:0 0 13px;width:13px;height:13px;vertical-align:middle;margin-left:2px;color:inherit;letter-spacing:0}
+.arrow-icon::before{content:"";position:absolute;left:0;top:6px;width:13px;height:1.6px;border-radius:1px;background:currentColor;transform:rotate(-45deg)}
+.arrow-icon::after{content:"";position:absolute;right:0;top:0;width:7px;height:7px;border-top:1.6px solid currentColor;border-right:1.6px solid currentColor;border-top-right-radius:1px}
+
 .video-section{padding:72px 0 85px;border-top:1px solid var(--line);background:#0d0d0b}
 .section-heading{margin-bottom:30px}
 .video-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
@@ -94,11 +104,11 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 .hero{min-height:min(570px,calc(80svh - 68px))}.hero-copy{padding:75px 0 65px}.hero:after{width:94vw;right:-50%;top:38%}
 .hero h1{font-size:clamp(53px,14vw,76px)}.hero p{font-size:13px;max-width:335px}.button{font-size:10px;padding:0 17px;min-height:43px}
 .releases-section{padding:58px 0 68px}.release-heading{padding-bottom:31px}.release-heading h2,.section-heading h2{font-size:clamp(40px,11vw,56px)}.release-heading p{font-size:13px}
-.track{grid-template-columns:74px minmax(0,1fr) auto;min-height:109px;gap:13px;padding:13px 3px}.track.featured{min-height:119px;gap:13px;padding:13px 10px;border-radius:15px}
-.cover{width:72px;border-radius:10px}.track-title{font-size:17px;line-height:1.18}.track-copy{gap:8px}.track-meta{font-size:9px;letter-spacing:.11em}.release-date{display:none}.listen{font-size:11px;letter-spacing:.1em;padding:8px 0 8px 4px}
+.track{grid-template-columns:61px minmax(0,1fr) auto;min-height:86px;gap:12px;padding:9px 3px}.track.featured{grid-template-columns:74px minmax(0,1fr) auto;min-height:119px;gap:13px;padding:13px 10px;border-radius:15px}
+.cover{width:59px;border-radius:9px}.track.featured .cover{width:72px;border-radius:10px}.track-title{font-size:15px;line-height:1.18}.track.featured .track-title{font-size:17px}.track-copy{gap:6px}.track.featured .track-copy{gap:8px}.track-meta{font-size:9px;letter-spacing:.11em}.release-date{display:none}.listen{font-size:11px;letter-spacing:.1em;padding:8px 0 8px 4px}
 .video-section{padding:58px 0 64px}.video-caption{padding:16px}.follow{padding:65px 0}.social-card{padding:20px}.footer-row{align-items:flex-start;flex-direction:column}
 }
-@media(max-width:370px){.wrap{width:calc(100% - 28px)}.track{grid-template-columns:62px minmax(0,1fr) auto;gap:10px}.track.featured{gap:9px;padding-inline:8px}.cover{width:60px}.track-title{font-size:15px}.track-meta{font-size:8px}.listen{font-size:10px}}
+@media(max-width:370px){.wrap{width:calc(100% - 28px)}.track{grid-template-columns:55px minmax(0,1fr) auto;gap:9px}.track.featured{grid-template-columns:62px minmax(0,1fr) auto;gap:9px;padding-inline:8px}.cover{width:52px}.track.featured .cover{width:60px}.track-title{font-size:14px}.track.featured .track-title{font-size:15px}.track-meta{font-size:8px}.listen{font-size:10px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -113,74 +123,74 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 <div class="eyebrow">Independent sound · Est. 2026</div>
 <h1 id="hero-title">Musik uden<br><span>grænser.</span></h1>
 <p>Et univers af melodier, stemninger og historier på tværs af sprog og kulturer. Velkommen til SYNQ STUDIOS.</p>
-<div class="hero-actions"><a class="button gold" href="#udgivelser">Udforsk udgivelser</a><a class="button outline" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer">Besøg YouTube ↗</a></div>
+<div class="hero-actions"><a class="button gold" href="#udgivelser">Udforsk udgivelser</a><a class="button outline" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer">Besøg YouTube <span class="arrow-icon" aria-hidden="true"></span></a></div>
 </div></div></section>
 <section class="releases-section" id="udgivelser" aria-labelledby="releases-title"><div class="wrap">
 <div class="release-heading"><div class="eyebrow">SYNQ STUDIOS · 2026</div><h2 id="releases-title">Udgivelser</h2><p>10 udgivelser · 2026</p></div>
 <div class="track-list"><button class="track featured" type="button" data-index="0" aria-label="Vælg hvor du vil lytte til Når Lyset Slukker">
 <span class="cover"><img src="assets/naar-lyset-slukker.webp" alt="Cover til Når Lyset Slukker" width="112" height="112" fetchpriority="high" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Når Lyset Slukker</span><span class="track-meta latest">SENESTE UDGIVELSE<span class="release-date"> · 13. oktober 2026</span></span></span>
-<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+<span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
 </button>
 <button class="track" type="button" data-index="1" aria-label="Vælg hvor du vil lytte til Stadig her">
 <span class="cover"><img src="assets/stadig-her.webp" alt="Cover til Stadig her" width="112" height="112" fetchpriority="high" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Stadig her</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 2. oktober 2026</span></span></span>
-<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+<span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
 </button>
 <button class="track" type="button" data-index="2" aria-label="Vælg hvor du vil lytte til Bliv i nat">
 <span class="cover"><img src="assets/bliv-i-nat.webp" alt="Cover til Bliv i nat" width="112" height="112" fetchpriority="high" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Bliv i nat</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 13. september 2026</span></span></span>
-<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+<span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
 </button>
 <button class="track" type="button" data-index="3" aria-label="Vælg hvor du vil lytte til Nav Dilê Min">
 <span class="cover"><img src="assets/nav-dile-min.webp" alt="Cover til Nav Dilê Min" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Nav Dilê Min</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 30. august 2026</span></span></span>
-<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+<span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
 </button>
 <button class="track" type="button" data-index="4" aria-label="Vælg hvor du vil lytte til Ya Layali">
 <span class="cover"><img src="assets/ya-layali.webp" alt="Cover til Ya Layali" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Ya Layali</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 14. august 2026</span></span></span>
-<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+<span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
 </button>
 <button class="track" type="button" data-index="5" aria-label="Vælg hvor du vil lytte til C’est La Vie">
 <span class="cover"><img src="assets/cest-la-vie.webp" alt="Cover til C’est La Vie" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">C’est La Vie</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 24. juli 2026</span></span></span>
-<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+<span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
 </button>
 <button class="track" type="button" data-index="6" aria-label="Vælg hvor du vil lytte til Jeg Sagde Det Fint">
 <span class="cover"><img src="assets/jeg-sagde-det-fint.webp" alt="Cover til Jeg Sagde Det Fint" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Jeg Sagde Det Fint</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 17. juli 2026</span></span></span>
-<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+<span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
 </button>
 <button class="track" type="button" data-index="7" aria-label="Vælg hvor du vil lytte til Yine">
 <span class="cover"><img src="assets/yine.webp" alt="Cover til Yine" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Yine</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 3. juli 2026</span></span></span>
-<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+<span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
 </button>
 <button class="track" type="button" data-index="8" aria-label="Vælg hvor du vil lytte til Efter Solnedgang">
 <span class="cover"><img src="assets/efter-solnedgang.webp" alt="Cover til Efter Solnedgang" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Efter Solnedgang</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 19. juni 2026</span></span></span>
-<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+<span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
 </button>
 <button class="track" type="button" data-index="9" aria-label="Vælg hvor du vil lytte til Şevên Dirêj (Lange Nætter)">
 <span class="cover"><img src="assets/seven-direj.webp" alt="Cover til Şevên Dirêj (Lange Nætter)" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Şevên Dirêj (Lange Nætter)</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 7. juni 2026</span></span></span>
-<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+<span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
 </button></div>
 </div></section>
 <section class="video-section" id="videoer" aria-labelledby="video-title"><div class="wrap">
 <div class="section-heading"><div class="eyebrow">YouTube Music</div><h2 id="video-title">Lyt med.</h2><p>Afspil udvalgte udgivelser direkte på siden.</p></div>
 <div class="video-grid">
-<article class="video-card"><div class="video-frame"><iframe loading="lazy" title="Nav Dilê Min — SYNQ Studios på YouTube" src="https://www.youtube-nocookie.com/embed/vHXKaHbS0_w" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-caption"><strong>Nav Dilê Min</strong><a href="https://music.youtube.com/watch?v=vHXKaHbS0_w" target="_blank" rel="noopener noreferrer">Åbn ↗</a></div></article>
-<article class="video-card"><div class="video-frame"><iframe loading="lazy" title="Ya Layali — SYNQ Studios på YouTube" src="https://www.youtube-nocookie.com/embed/ypyPki4PSSI" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-caption"><strong>Ya Layali</strong><a href="https://music.youtube.com/watch?v=ypyPki4PSSI" target="_blank" rel="noopener noreferrer">Åbn ↗</a></div></article>
+<article class="video-card"><div class="video-frame"><iframe loading="lazy" title="Nav Dilê Min — SYNQ Studios på YouTube" src="https://www.youtube-nocookie.com/embed/vHXKaHbS0_w" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-caption"><strong>Nav Dilê Min</strong><a href="https://music.youtube.com/watch?v=vHXKaHbS0_w" target="_blank" rel="noopener noreferrer">Åbn <span class="arrow-icon" aria-hidden="true"></span></a></div></article>
+<article class="video-card"><div class="video-frame"><iframe loading="lazy" title="Ya Layali — SYNQ Studios på YouTube" src="https://www.youtube-nocookie.com/embed/ypyPki4PSSI" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-caption"><strong>Ya Layali</strong><a href="https://music.youtube.com/watch?v=ypyPki4PSSI" target="_blank" rel="noopener noreferrer">Åbn <span class="arrow-icon" aria-hidden="true"></span></a></div></article>
 </div>
 </div></section>
 <section class="follow" id="foelg" aria-labelledby="follow-title"><div class="wrap">
 <div class="eyebrow">Følg med</div><h2 id="follow-title">Hold forbindelsen.</h2><p>Følg SYNQ STUDIOS for nye udgivelser, videoer og glimt fra musikuniverset.</p>
 <div class="social-grid">
-<a class="social-card" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>ABONNER ↗</span></a>
-<a class="social-card" href="https://www.instagram.com/synqstudiosofficial/" target="_blank" rel="noopener noreferrer"><strong>Instagram</strong><span>FØLG ↗</span></a>
-<a class="social-card" href="https://www.tiktok.com/@synqstudiosofficial" target="_blank" rel="noopener noreferrer"><strong>TikTok</strong><span>FØLG ↗</span></a>
+<a class="social-card" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>ABONNER <span class="arrow-icon" aria-hidden="true"></span></span></a>
+<a class="social-card" href="https://www.instagram.com/synqstudiosofficial/" target="_blank" rel="noopener noreferrer"><strong>Instagram</strong><span>FØLG <span class="arrow-icon" aria-hidden="true"></span></span></a>
+<a class="social-card" href="https://www.tiktok.com/@synqstudiosofficial" target="_blank" rel="noopener noreferrer"><strong>TikTok</strong><span>FØLG <span class="arrow-icon" aria-hidden="true"></span></span></a>
 </div>
 </div></section>
 </main>
@@ -208,7 +218,7 @@ function openRelease(index){
  if(!release.youtube)links.push(["Besøg YouTube-kanalen",channel]);
  links.forEach(item=>{
   const a=document.createElement("a");a.className="platform";a.href=item[1];a.target="_blank";a.rel="noopener noreferrer";
-  const label=document.createElement("span");label.textContent=item[0];const arrow=document.createElement("span");arrow.textContent="↗";
+  const label=document.createElement("span");label.textContent=item[0];const arrow=document.createElement("span");arrow.className="arrow-icon";arrow.setAttribute("aria-hidden","true");
   a.append(label,arrow);platforms.append(a);
  });
  document.getElementById("modalNote").textContent=release.youtube?"Alle links går direkte til den valgte udgivelse.":"Apple Music-linket går direkte til sangen. YouTube-linket åbner den officielle kanal.";
