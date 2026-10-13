@@ -40,11 +40,13 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 .hero-art{display:block;width:100%;aspect-ratio:1;border-radius:13px;overflow:hidden;border:1px solid rgba(201,169,109,.17);background:#171612;transition:transform .25s,border-color .25s}
 .hero-art:hover{transform:translateY(-2px);border-color:var(--gold)}
 .hero-art img{display:block;width:100%;height:100%;object-fit:cover}
-.hero-release-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 2px 1px}
-.hero-release-caption{color:var(--gold);font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;line-height:1.6}
-.hero-listen{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:48px;padding:0 26px;border:1px solid var(--gold);border-radius:999px;background:var(--gold);color:#17130b;font-size:13px;font-weight:800;letter-spacing:.14em;transition:background .2s,color .2s,transform .2s;white-space:nowrap}
+.hero-release-actions{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.5fr);align-items:stretch;gap:10px;padding:18px 2px 1px}
+.hero-listen,.hero-all{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 12px;border:1px solid var(--gold);border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.055em;transition:background .2s,color .2s,transform .2s;white-space:nowrap}
+.hero-listen{background:var(--gold);color:#17130b}
+.hero-all{background:transparent;color:var(--gold-light)}
 .hero-listen:hover{background:var(--gold-light);color:#0c0b08;transform:translateY(-2px)}
-.hero-listen:focus-visible,.hero-art:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
+.hero-all:hover{background:rgba(201,169,109,.11);color:#fff;transform:translateY(-2px)}
+.hero-listen:focus-visible,.hero-all:focus-visible,.hero-art:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
 .hero-listen .arrow-icon{color:inherit}
 .releases-section{padding:85px 0 96px}
 .release-heading{padding-bottom:42px;border-bottom:1px solid var(--line)}
@@ -98,15 +100,15 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 .wrap{width:calc(100% - 36px)}.topbar{height:68px}.brand{font-size:12px;letter-spacing:.24em}.navlinks{gap:12px;font-size:9px}.navlinks a:first-child{display:none}.navcta{padding:9px 12px}
 .hero-inner{display:flex;flex-direction:column;align-items:stretch;gap:30px;min-height:0;padding:66px 0 64px}.hero:before{width:490px;height:490px;right:-98%;top:5%;box-shadow:0 0 0 75px rgba(201,169,109,.012)}
 .hero .eyebrow{font-size:10px;letter-spacing:.19em;line-height:1.6}.hero h1{font-size:clamp(53px,14.2vw,69px);line-height:1.04;margin:21px 0 22px}.hero p{font-size:11px;letter-spacing:.17em}
-.hero-release{display:grid;grid-template-columns:160px minmax(0,1fr);align-items:center;gap:16px;padding:13px;border-radius:18px;min-height:187px}.hero-art{width:160px;border-radius:12px}
-.hero-release-actions{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:18px;padding:0}.hero-release-caption{font-size:9px;letter-spacing:.13em}
-.hero-listen{min-height:46px;padding:0 13px;gap:10px;font-size:12px;width:100%}
+.hero-release{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:16px;border-radius:19px}.hero-art{width:100%;border-radius:13px}
+.hero-release-actions{grid-template-columns:minmax(0,.9fr) minmax(0,1.5fr);gap:10px;padding:17px 0 0}
+.hero-listen,.hero-all{min-height:47px;padding:0 10px;gap:8px;font-size:12px;width:100%}
 .releases-section{padding:58px 0 68px}.release-heading{padding-bottom:31px}.release-heading h2,.section-heading h2{font-size:clamp(40px,11vw,56px)}.release-heading p{font-size:13px}
 .track{grid-template-columns:61px minmax(0,1fr) auto;min-height:86px;gap:12px;padding:9px 3px}
 .cover{width:59px;border-radius:9px}.track-title{font-size:15px;line-height:1.18}.track-copy{gap:6px}.track-meta{font-size:9px;letter-spacing:.11em}.release-date{display:none}.listen{font-size:11px;letter-spacing:.1em;padding:8px 0 8px 4px}
 .video-section{padding:58px 0 64px}.video-caption{padding:16px}.follow{padding:65px 0}.social-card{padding:20px}.footer-row{align-items:flex-start;flex-direction:column}
 }
-@media(max-width:370px){.wrap{width:calc(100% - 28px)}.hero-inner{gap:25px;padding:55px 0 55px}.hero h1{font-size:clamp(46px,13.8vw,52px)}.hero-release{grid-template-columns:143px minmax(0,1fr);gap:12px;padding:10px;min-height:163px}.hero-art{width:143px}.hero-release-caption{font-size:8px}.hero-listen{min-height:42px;padding:0 10px;font-size:11px}.track{grid-template-columns:55px minmax(0,1fr) auto;gap:9px}.cover{width:52px}.track-title{font-size:14px}.track-meta{font-size:8px}.listen{font-size:10px}}
+@media(max-width:370px){.wrap{width:calc(100% - 28px)}.hero-inner{gap:25px;padding:55px 0 55px}.hero h1{font-size:clamp(46px,13.8vw,52px)}.hero-release{padding:12px}.hero-listen,.hero-all{min-height:43px;padding:0 7px;font-size:10px}.hero-release-actions{gap:8px}.track{grid-template-columns:55px minmax(0,1fr) auto;gap:9px}.cover{width:52px}.track-title{font-size:14px}.track-meta{font-size:8px}.listen{font-size:10px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -125,7 +127,7 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 </div>
 <div class="hero-release">
 <a class="hero-art" href="sange/naar-lyset-slukker/" aria-label="Åbn Når Lyset Slukker"><img src="assets/naar-lyset-slukker.webp" alt="Cover til Når Lyset Slukker" width="640" height="640" fetchpriority="high" decoding="async"></a>
-<div class="hero-release-actions"><span class="hero-release-caption">NY SINGLE</span><a class="hero-listen" href="sange/naar-lyset-slukker/" aria-label="Lyt til Når Lyset Slukker">LYT <span class="arrow-icon" aria-hidden="true"></span></a></div>
+<div class="hero-release-actions"><a class="hero-listen" href="sange/naar-lyset-slukker/" aria-label="Lyt til Når Lyset Slukker">LYT <span class="arrow-icon" aria-hidden="true"></span></a><a class="hero-all" href="#udgivelser" aria-label="Se alle udgivelser">Alle udgivelser <span class="arrow-icon" aria-hidden="true"></span></a></div>
 </div>
 </div></div></section>
 <section class="releases-section" id="udgivelser" aria-labelledby="releases-title"><div class="wrap">
