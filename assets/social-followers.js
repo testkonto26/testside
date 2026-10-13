@@ -9,7 +9,7 @@
   .then(function(data){
    const p=data&&data.platforms;
    if(!p)return;
-   const values=[p.tiktok,p.instagram,p.youtube];
+   const values=[p.tiktok,p.instagram,p.youtube,p.spotify];
    if(values.some(function(v){return !Number.isSafeInteger(v)||v<0;}))return;
    const total=values.reduce(function(a,b){return a+b;},0);
    if(Number.isSafeInteger(total))target.textContent=nf.format(total);
