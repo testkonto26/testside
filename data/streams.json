@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "platforms": [
+    "Spotify",
+    "YouTube",
+    "Apple Music"
+  ],
+  "tracks": {
+    "naar-lyset-slukker": {
+      "streams": null,
+      "updatedAt": null
+    },
+    "stadig-her": {
+      "streams": null,
+      "updatedAt": null
+    },
+    "bliv-i-nat": {
+      "streams": null,
+      "updatedAt": null
+    },
+    "nav-dile-min": {
+      "streams": null,
+      "updatedAt": null
+    },
+    "ya-layali": {
+      "streams": null,
+      "updatedAt": null
+    },
+    "cest-la-vie": {
+      "streams": null,
+      "updatedAt": null
+    },
+    "jeg-sagde-det-fint": {
+      "streams": null,
+      "updatedAt": null
+    },
+    "yine": {
+      "streams": null,
+      "updatedAt": null
+    },
+    "efter-solnedgang": {
+      "streams": null,
+      "updatedAt": null
+    },
+    "seven-direj": {
+      "streams": null,
+      "updatedAt": null
+    }
+  }
+}
