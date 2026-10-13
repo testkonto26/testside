@@ -4,71 +4,218 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#080807">
-<meta name="description" content="SYNQ STUDIOS — musik, historier og stemninger uden grænser.">
-<meta property="og:title" content="SYNQ STUDIOS — Official">
-<meta property="og:description" content="Oplev udgivelser fra SYNQ STUDIOS.">
-<title>SYNQ STUDIOS — Official</title>
+<meta name="description" content="SYNQ STUDIOS — musik uden grænser. Hør alle 10 udgivelser, se originale covers, og find musikken på Apple Music, Spotify, YouTube Music og TIDAL.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SYNQ STUDIOS — Musik uden grænser">
+<meta property="og:description" content="Udgivelser, musik og historier på tværs af sprog. Oplev SYNQ STUDIOS.">
+<meta property="og:image" content="https://testkonto26.github.io/testside/assets/naar-lyset-slukker.webp">
+<title>SYNQ STUDIOS — Musik uden grænser</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/naar-lyset-slukker.webp" as="image">
 <style>
-:root{color-scheme:dark;--black:#080807;--white:#f5f2eb;--muted:#85837e;--gold:#c9a96d;--gold-light:#d9be8b;--line:#292825;--sans:"DM Sans",Arial,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px;background:var(--black)}body{margin:0;background:var(--black);color:var(--white);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(1050px,calc(100% - 64px));margin:auto}
-.topbar{height:78px;position:sticky;top:0;z-index:10;background:rgba(8,8,7,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:14px;font-weight:700;letter-spacing:.29em;white-space:nowrap}.navlinks{display:flex;align-items:center;gap:28px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d4d0c8}.navlinks a{transition:color .2s}.navlinks a:hover{color:var(--gold-light)}.navcta{border:1px solid rgba(201,169,109,.45);border-radius:999px;padding:10px 15px;color:var(--gold-light)}
-.hero{min-height:570px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 78% 48%,rgba(169,131,72,.14),transparent 34%),linear-gradient(110deg,#080807,#10100d)}.hero:after{content:"";position:absolute;width:min(56vw,620px);aspect-ratio:1;border:1px solid rgba(201,169,109,.17);border-radius:50%;right:-8%;top:50%;transform:translateY(-50%);box-shadow:0 0 0 55px rgba(201,169,109,.025),0 0 0 110px rgba(201,169,109,.018)}.hero-copy{position:relative;z-index:1;padding:95px 0;max-width:690px}.eyebrow{font-size:9px;font-weight:600;letter-spacing:.27em;text-transform:uppercase;color:var(--gold-light)}.hero h1{font:700 clamp(57px,9vw,105px)/.96 var(--sans);letter-spacing:-.055em;margin:22px 0}.hero h1 span{font-style:italic;color:var(--gold-light)}.hero p{max-width:450px;color:#b7b3ab;font-size:14px;line-height:1.8;margin:0}.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:27px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.button.gold{color:#17130c;background:var(--gold-light)}.button.outline{border:1px solid #54514a}
-.releases-section{padding:83px 0 100px}.release-heading{padding-bottom:48px;border-bottom:1px solid var(--line)}.release-heading h2{margin:14px 0 22px;font-size:clamp(42px,7vw,66px);line-height:1;font-weight:700;letter-spacing:-.055em}.release-heading p{margin:0;color:var(--muted);font-size:15px;letter-spacing:.02em}
-.track-list{padding-top:0}.track{min-height:144px;display:grid;grid-template-columns:116px minmax(0,1fr) auto;align-items:center;gap:24px;padding:18px 12px;border-bottom:1px solid var(--line);transition:background .2s}.track:not(.featured):hover{background:rgba(255,255,255,.025)}.track.featured{min-height:170px;margin-top:2px;padding:17px 20px;border:2px solid var(--gold);border-radius:18px;background:linear-gradient(105deg,rgba(201,169,109,.08),rgba(201,169,109,.018) 62%,transparent);box-shadow:0 0 0 1px rgba(201,169,109,.08)}
-.cover{width:104px;aspect-ratio:1;border-radius:11px;overflow:hidden;position:relative;background:#161613;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}.cover:before{content:"";position:absolute;inset:0;background:var(--scene);filter:saturate(.78)}.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 24%,rgba(0,0,0,.26) 58%,rgba(0,0,0,.58)),repeating-linear-gradient(118deg,transparent 0 13px,rgba(255,255,255,.018) 14px,transparent 15px)}.cover-nav{--scene:radial-gradient(ellipse at 57% 56%,#f5d49b 0 2%,#b88a50 4%,transparent 10%),radial-gradient(ellipse at 53% 61%,#59432d 1%,transparent 28%),linear-gradient(180deg,#121a21 0%,#202629 41%,#07090a 100%)}.cover-ya{--scene:linear-gradient(90deg,transparent 0 22%,#090d0e 23% 28%,transparent 29% 60%,#101416 61% 70%,transparent 71%),linear-gradient(180deg,#0b1114 0 40%,#414138 41%,#171613 100%),radial-gradient(ellipse at 75% 48%,#c49a5a,transparent 10%)}.cover-cest{--scene:radial-gradient(ellipse at 72% 52%,#ffd782 0 4%,#f89a43 9%,transparent 22%),linear-gradient(180deg,#28343a 0%,#bd6840 47%,#e9a054 59%,#30251c 80%,#11110e)}.cover-jeg{--scene:radial-gradient(ellipse at 72% 34%,#b49a6a 0 2%,transparent 10%),linear-gradient(180deg,#18202a 0%,#37434a 47%,#131718 49% 52%,#080a0b 100%)}.cover-yine{--scene:radial-gradient(ellipse at 48% 49%,#ffe18d 0 2%,transparent 6%),radial-gradient(ellipse at 72% 58%,#cb873d 0 3%,transparent 9%),linear-gradient(180deg,#07101d 0%,#122236 52%,#171a1b 54%,#08090a)}.cover-efter{--scene:radial-gradient(ellipse at 50% 40%,#ff9d58 0 3%,transparent 10%),linear-gradient(180deg,#25232b 0%,#7c3c34 42%,#e18155 53%,#211a19 73%,#0a0b0c)}.cover-seven{--scene:radial-gradient(ellipse at 53% 36%,#d8be89 0 3%,transparent 11%),linear-gradient(180deg,#101922 0%,#36424a 45%,#171b1d 58%,#08090b)}
-.track-copy{min-width:0}.track h3{margin:0 0 10px;font-size:clamp(19px,2.6vw,27px);font-weight:700;letter-spacing:-.035em;line-height:1.2}.track-meta{color:var(--muted);font-size:12px;letter-spacing:.17em;text-transform:uppercase}.featured .track-meta{color:var(--gold-light);font-weight:700}.listen{padding:14px 4px 14px 18px;color:var(--gold-light);font-size:13px;font-weight:700;letter-spacing:.18em;white-space:nowrap}.listen:hover{color:#f2dda9}.follow{padding:75px 0 80px;background:#0d0d0b;border-top:1px solid rgba(255,255,255,.04);text-align:center}.follow h2{font:600 clamp(35px,5vw,55px)/1.1 var(--sans);margin:13px 0}.follow p{color:var(--muted);font-size:13px;line-height:1.7;margin:0 auto;max-width:430px}.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:26px}.social{min-width:125px;border:1px solid rgba(201,169,109,.38);border-radius:999px;padding:13px 18px;color:#e7dbbf;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.social:hover{background:var(--gold-light);color:#17130c}.social.disabled{color:#77746d;border-color:#33312d}
-.footer{padding:24px 0 calc(24px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:#89867e;font-size:10px;letter-spacing:.13em}.footer-row{display:flex;justify-content:space-between;gap:18px}.footer strong{color:#e0dbd2;letter-spacing:.19em}
-@media(max-width:650px){.wrap{width:calc(100% - 36px)}.topbar{height:66px}.brand{font-size:12px;letter-spacing:.26em}.navlinks{gap:12px;font-size:9px}.navlinks a:first-child{display:none}.navcta{padding:9px 12px}.hero{min-height:525px;min-height:min(600px,calc(82svh - 66px))}.hero-copy{padding:77px 0 68px}.hero:after{width:94vw;right:-50%;top:39%}.hero h1{font-size:clamp(54px,14vw,76px);margin:19px 0}.hero p{font-size:13px;max-width:330px}.hero-actions{margin-top:22px}.button{min-height:42px;font-size:8px;padding:0 14px}.releases-section{padding:60px 0 72px}.release-heading{padding-bottom:34px}.release-heading h2{font-size:42px;margin:13px 0 16px}.release-heading p{font-size:13px}.track{min-height:128px;grid-template-columns:78px minmax(0,1fr) auto;gap:15px;padding:14px 7px}.track.featured{min-height:130px;padding:12px 11px;border-radius:17px;margin-top:0}.cover{width:76px;border-radius:9px}.track h3{font-size:18px;margin-bottom:8px}.track-meta{font-size:9px;letter-spacing:.14em}.listen{font-size:10px;letter-spacing:.12em;padding:12px 1px 12px 5px}.follow{padding:61px 0 65px}.follow h2{font-size:42px}.social{min-width:0;padding:12px 14px;font-size:9px}.footer{font-size:9px;line-height:1.8}.footer-row{display:block;text-align:center}.footer strong{display:block;margin-top:5px}}
-@media(max-width:370px){.wrap{width:calc(100% - 28px)}.track{grid-template-columns:66px minmax(0,1fr) auto;gap:11px}.cover{width:64px}.track h3{font-size:16px}.track-meta{font-size:8px}.listen{font-size:9px}.track.featured{padding-inline:8px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+:root{color-scheme:dark;--black:#080807;--black2:#10100e;--white:#f5f2eb;--muted:#888680;--gold:#c9a96d;--gold-light:#d9be8b;--line:#2b2a27;--font:"DM Sans",Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px;background:var(--black)}
+body{margin:0;background:var(--black);color:var(--white);font-family:var(--font);-webkit-font-smoothing:antialiased}
+button{font:inherit}a{color:inherit;text-decoration:none}
+.wrap{width:min(1050px,calc(100% - 60px));margin:auto}
+.skip{position:absolute;top:-80px;left:12px;padding:12px 20px;background:var(--gold);color:#111;z-index:50}.skip:focus{top:12px}
+.topbar{height:80px;position:sticky;top:0;z-index:10;background:rgba(8,8,7,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-size:15px;font-weight:800;letter-spacing:.30em;white-space:nowrap;color:#fff}
+.navlinks{display:flex;align-items:center;gap:25px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d6d1c8}
+.navlinks a:hover{color:var(--gold-light)}
+.navcta{border:1px solid rgba(201,169,109,.45);border-radius:999px;padding:11px 17px;color:var(--gold-light)}
+.hero{position:relative;overflow:hidden;min-height:545px;display:flex;align-items:center;background:radial-gradient(ellipse at 80% 43%,rgba(169,131,72,.15),transparent 37%),linear-gradient(110deg,#080807,#11100e)}
+.hero:after{content:"";position:absolute;width:min(56vw,630px);aspect-ratio:1;border:1px solid rgba(201,169,109,.17);border-radius:50%;right:-8%;top:50%;transform:translateY(-50%);box-shadow:0 0 0 55px rgba(201,169,109,.025),0 0 0 110px rgba(201,169,109,.018);pointer-events:none}
+.hero-copy{position:relative;z-index:1;padding:96px 0;max-width:670px}
+.eyebrow{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.hero h1{font-size:clamp(58px,9vw,103px);font-weight:800;line-height:.96;letter-spacing:-.066em;margin:21px 0 26px}
+.hero h1 span{font-style:italic;color:var(--gold-light)}
+.hero p{max-width:470px;color:#b9b4ac;font-size:15px;line-height:1.82;margin:0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:0 24px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.045em;transition:transform .2s,background .2s}
+.button:hover{transform:translateY(-2px)}
+.button.gold{background:var(--gold);color:#13110c;border:1px solid var(--gold)}
+.button.outline{border:1px solid rgba(201,169,109,.44);color:var(--gold-light)}
+.releases-section{padding:85px 0 96px}
+.release-heading{padding-bottom:42px;border-bottom:1px solid var(--line)}
+.release-heading h2,.section-heading h2{font-size:clamp(43px,7vw,67px);line-height:1;letter-spacing:-.055em;font-weight:800;margin:15px 0 19px}
+.release-heading p,.section-heading p{color:var(--muted);font-size:15px;line-height:1.7;margin:0}
+.track-list{display:block}
+.track{width:100%;appearance:none;text-align:left;cursor:pointer;color:var(--white);border:0;border-bottom:1px solid var(--line);background:transparent;display:grid;grid-template-columns:112px minmax(0,1fr) auto;align-items:center;gap:24px;padding:19px 12px;min-height:144px;transition:background .2s}
+.track:hover{background:rgba(255,255,255,.027)}
+.track:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.track.featured{margin-top:2px;min-height:166px;padding:19px 20px;border:2px solid var(--gold);border-radius:19px;background:linear-gradient(110deg,rgba(201,169,109,.085),rgba(201,169,109,.018) 60%,transparent);box-shadow:0 0 0 1px rgba(201,169,109,.05)}
+.cover{display:block;width:104px;aspect-ratio:1;overflow:hidden;border-radius:11px;background:#171715;box-shadow:0 0 0 1px rgba(255,255,255,.09)}
+.cover img{display:block;width:100%;height:100%;object-fit:cover}
+.track-copy{display:flex;flex-direction:column;gap:11px;min-width:0}
+.track-title{display:block;font-size:clamp(19px,2.6vw,27px);line-height:1.18;font-weight:700;letter-spacing:-.035em}
+.track-meta{color:var(--muted);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.65}
+.track-meta.latest{color:var(--gold-light);font-weight:800}
+.release-date{font-size:10px;letter-spacing:.06em;opacity:.75;text-transform:none}
+.listen{display:inline-flex;align-items:center;gap:6px;color:var(--gold-light);font-size:13px;font-weight:800;letter-spacing:.16em;white-space:nowrap;padding:14px 4px 14px 14px}
+.track:hover .listen{color:#f2d8a4}
+.video-section{padding:72px 0 85px;border-top:1px solid var(--line);background:#0d0d0b}
+.section-heading{margin-bottom:30px}
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.video-card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#121210}
+.video-frame{aspect-ratio:16/9;background:#070707}
+.video-frame iframe{width:100%;height:100%;border:0;display:block}
+.video-caption{padding:18px 20px;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.video-caption strong{font-size:15px}.video-caption a{color:var(--gold-light);font-size:12px;font-weight:700;white-space:nowrap}
+.follow{padding:78px 0 86px;text-align:center;background:#080807}
+.follow h2{font-size:clamp(36px,6vw,58px);letter-spacing:-.05em;margin:16px 0 12px;line-height:1.08}
+.follow p{color:var(--muted);font-size:15px;line-height:1.7;max-width:540px;margin:0 auto 30px}
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.social-card{min-height:158px;border:1px solid var(--line);border-radius:18px;background:#111110;padding:24px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;transition:border-color .2s,transform .2s}
+.social-card:hover{border-color:rgba(201,169,109,.55);transform:translateY(-2px)}
+.social-card strong{font-size:23px;letter-spacing:-.04em}.social-card span{font-size:12px;letter-spacing:.13em;color:var(--gold-light);font-weight:700}
+.footer{padding:27px 0 calc(27px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:#89867e;font-size:10px;letter-spacing:.14em}
+.footer-row{display:flex;justify-content:space-between;gap:18px;align-items:center}
+.footer strong{color:#d5cfc4;letter-spacing:.17em}
+.player-modal{width:min(470px,calc(100% - 28px));max-height:min(90dvh,740px);padding:0;border:1px solid rgba(201,169,109,.48);border-radius:23px;background:#10100e;color:var(--white);box-shadow:0 30px 100px rgba(0,0,0,.75);overflow:auto}
+.player-modal::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(5px)}
+.modal-inner{padding:28px}
+.modal-top{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.modal-close{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:#1a1a18;color:#fff;font-size:24px;cursor:pointer}
+.modal-art{width:112px;height:112px;border-radius:13px;object-fit:cover;margin:25px 0 18px;border:1px solid var(--line)}
+.modal-title{font-size:29px;letter-spacing:-.045em;line-height:1.14;margin:0}
+.modal-date{color:var(--muted);font-size:12px;margin:10px 0 24px}
+.platforms{display:grid;gap:10px}
+.platform{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:52px;padding:0 17px;border:1px solid var(--line);border-radius:12px;background:#191917;color:#f5f2eb;font-size:14px;font-weight:700;transition:border-color .2s}
+.platform:hover,.platform:focus-visible{border-color:var(--gold);color:var(--gold-light)}
+.modal-note{font-size:11px;color:var(--muted);line-height:1.6;margin:18px 0 0}
+@media(max-width:760px){.video-grid{grid-template-columns:1fr}.social-grid{grid-template-columns:1fr}.social-card{min-height:100px;flex-direction:row;align-items:center}.social-card strong{font-size:21px}}
+@media(max-width:650px){
+.wrap{width:calc(100% - 36px)}.topbar{height:68px}.brand{font-size:12px;letter-spacing:.24em}.navlinks{gap:12px;font-size:9px}.navlinks a:first-child{display:none}.navcta{padding:9px 12px}
+.hero{min-height:min(570px,calc(80svh - 68px))}.hero-copy{padding:75px 0 65px}.hero:after{width:94vw;right:-50%;top:38%}
+.hero h1{font-size:clamp(53px,14vw,76px)}.hero p{font-size:13px;max-width:335px}.button{font-size:10px;padding:0 17px;min-height:43px}
+.releases-section{padding:58px 0 68px}.release-heading{padding-bottom:31px}.release-heading h2,.section-heading h2{font-size:clamp(40px,11vw,56px)}.release-heading p{font-size:13px}
+.track{grid-template-columns:74px minmax(0,1fr) auto;min-height:109px;gap:13px;padding:13px 3px}.track.featured{min-height:119px;gap:13px;padding:13px 10px;border-radius:15px}
+.cover{width:72px;border-radius:10px}.track-title{font-size:17px;line-height:1.18}.track-copy{gap:8px}.track-meta{font-size:9px;letter-spacing:.11em}.release-date{display:none}.listen{font-size:11px;letter-spacing:.1em;padding:8px 0 8px 4px}
+.video-section{padding:58px 0 64px}.video-caption{padding:16px}.follow{padding:65px 0}.social-card{padding:20px}.footer-row{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:370px){.wrap{width:calc(100% - 28px)}.track{grid-template-columns:62px minmax(0,1fr) auto;gap:10px}.track.featured{gap:9px;padding-inline:8px}.cover{width:60px}.track-title{font-size:15px}.track-meta{font-size:8px}.listen{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
+<a class="skip" href="#udgivelser">Spring til udgivelser</a>
 <header class="topbar"><div class="wrap nav">
-<a class="brand" href="#top" aria-label="SYNQ STUDIOS — forsiden">SYNQ STUDIOS</a>
-<nav class="navlinks" aria-label="Hovedmenu"><a href="#udgivelser">Udgivelser</a><a class="navcta" href="#foelg">Følg os</a></nav>
+<a class="brand" href="#top" aria-label="SYNQ STUDIOS — forside">SYNQ STUDIOS</a>
+<nav class="navlinks" aria-label="Hovedmenu"><a href="#udgivelser">Udgivelser</a><a href="#videoer">Videoer</a><a class="navcta" href="#foelg">Følg os</a></nav>
 </div></header>
 <main id="top">
-<section class="hero"><div class="wrap"><div class="hero-copy">
+<section class="hero" aria-labelledby="hero-title"><div class="wrap"><div class="hero-copy">
 <div class="eyebrow">Independent sound · Est. 2026</div>
-<h1>Musik uden<br><span>grænser.</span></h1>
+<h1 id="hero-title">Musik uden<br><span>grænser.</span></h1>
 <p>Et univers af melodier, stemninger og historier på tværs af sprog og kulturer. Velkommen til SYNQ STUDIOS.</p>
-<div class="hero-actions"><a class="button gold" href="#udgivelser">Udforsk udgivelser</a><a class="button outline" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer">Besøg YouTube</a></div>
+<div class="hero-actions"><a class="button gold" href="#udgivelser">Udforsk udgivelser</a><a class="button outline" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer">Besøg YouTube ↗</a></div>
 </div></div></section>
-<section class="releases-section" id="udgivelser"><div class="wrap">
-<div class="release-heading"><div class="eyebrow">SYNQ STUDIOS · 2026</div><h2>Udgivelser</h2><p>SYNQ Studios · 2026</p></div>
-<div class="track-list">
-<a class="track featured" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Nav+Dil%C3%AA+Min" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Nav Dilê Min på YouTube">
-<span class="cover cover-nav" role="img" aria-label="Mørkt cover med lys over horisonten"></span><span class="track-copy"><h3>Nav Dilê Min</h3><span class="track-meta">Seneste udgivelse</span></span><span class="listen">LYT ↗</span>
-</a>
-<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Ya+Layali" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Ya Layali på YouTube">
-<span class="cover cover-ya" role="img" aria-label="Mørkt rum med varmt lys"></span><span class="track-copy"><h3>Ya Layali</h3><span class="track-meta">SYNQ STUDIOS</span></span><span class="listen">LYT ↗</span>
-</a>
-<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+C%27est+La+Vie" target="_blank" rel="noopener noreferrer" aria-label="Lyt til C’est La Vie på YouTube">
-<span class="cover cover-cest" role="img" aria-label="Solnedgang ved havet"></span><span class="track-copy"><h3>C’est La Vie</h3><span class="track-meta">SYNQ STUDIOS</span></span><span class="listen">LYT ↗</span>
-</a>
-<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Jeg+Sagde+Det+Fint" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Jeg Sagde Det Fint på YouTube">
-<span class="cover cover-jeg" role="img" aria-label="Regnfuld nat ved vandet"></span><span class="track-copy"><h3>Jeg Sagde Det Fint</h3><span class="track-meta">SYNQ STUDIOS</span></span><span class="listen">LYT ↗</span>
-</a>
-<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Yine" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Yine på YouTube">
-<span class="cover cover-yine" role="img" aria-label="Gyldne lys spejlet i regnvåd gade"></span><span class="track-copy"><h3>Yine</h3><span class="track-meta">SYNQ STUDIOS</span></span><span class="listen">LYT ↗</span>
-</a>
-<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Efter+Solnedgang" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Efter Solnedgang på YouTube">
-<span class="cover cover-efter" role="img" aria-label="Rødlig himmel efter solnedgang"></span><span class="track-copy"><h3>Efter Solnedgang</h3><span class="track-meta">SYNQ STUDIOS</span></span><span class="listen">LYT ↗</span>
-</a>
-<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+%C5%9Eev%C3%AAn+Dir%C3%AAj" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Şevên Dirêj på YouTube">
-<span class="cover cover-seven" role="img" aria-label="Blågrå nattehimmel"></span><span class="track-copy"><h3>Şevên Dirêj</h3><span class="track-meta">Lange Nætter</span></span><span class="listen">LYT ↗</span>
-</a>
-</div></div></section>
-<section class="follow" id="foelg"><div class="wrap"><div class="eyebrow">Følg med</div><h2>Hold forbindelsen.</h2><p>Følg SYNQ STUDIOS for nye udgivelser, videoer og glimt fra musikuniverset.</p><div class="socials">
-<a class="social" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer">YouTube</a>
-<a class="social" href="https://www.instagram.com/synqstudiosofficial/" target="_blank" rel="noopener noreferrer">Instagram</a>
-<span class="social disabled" aria-label="TikTok-profil tilføjes snart">TikTok · snart</span>
-</div></div></section>
+<section class="releases-section" id="udgivelser" aria-labelledby="releases-title"><div class="wrap">
+<div class="release-heading"><div class="eyebrow">SYNQ STUDIOS · 2026</div><h2 id="releases-title">Udgivelser</h2><p>10 udgivelser · 2026</p></div>
+<div class="track-list"><button class="track featured" type="button" data-index="0" aria-label="Vælg hvor du vil lytte til Når Lyset Slukker">
+<span class="cover"><img src="assets/naar-lyset-slukker.webp" alt="Cover til Når Lyset Slukker" width="112" height="112" fetchpriority="high" decoding="async"></span>
+<span class="track-copy"><span class="track-title">Når Lyset Slukker</span><span class="track-meta latest">SENESTE UDGIVELSE<span class="release-date"> · 13. oktober 2026</span></span></span>
+<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+</button>
+<button class="track" type="button" data-index="1" aria-label="Vælg hvor du vil lytte til Stadig her">
+<span class="cover"><img src="assets/stadig-her.webp" alt="Cover til Stadig her" width="112" height="112" fetchpriority="high" decoding="async"></span>
+<span class="track-copy"><span class="track-title">Stadig her</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 2. oktober 2026</span></span></span>
+<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+</button>
+<button class="track" type="button" data-index="2" aria-label="Vælg hvor du vil lytte til Bliv i nat">
+<span class="cover"><img src="assets/bliv-i-nat.webp" alt="Cover til Bliv i nat" width="112" height="112" fetchpriority="high" decoding="async"></span>
+<span class="track-copy"><span class="track-title">Bliv i nat</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 13. september 2026</span></span></span>
+<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+</button>
+<button class="track" type="button" data-index="3" aria-label="Vælg hvor du vil lytte til Nav Dilê Min">
+<span class="cover"><img src="assets/nav-dile-min.webp" alt="Cover til Nav Dilê Min" width="112" height="112" loading="lazy" decoding="async"></span>
+<span class="track-copy"><span class="track-title">Nav Dilê Min</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 30. august 2026</span></span></span>
+<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+</button>
+<button class="track" type="button" data-index="4" aria-label="Vælg hvor du vil lytte til Ya Layali">
+<span class="cover"><img src="assets/ya-layali.webp" alt="Cover til Ya Layali" width="112" height="112" loading="lazy" decoding="async"></span>
+<span class="track-copy"><span class="track-title">Ya Layali</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 14. august 2026</span></span></span>
+<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+</button>
+<button class="track" type="button" data-index="5" aria-label="Vælg hvor du vil lytte til C’est La Vie">
+<span class="cover"><img src="assets/cest-la-vie.webp" alt="Cover til C’est La Vie" width="112" height="112" loading="lazy" decoding="async"></span>
+<span class="track-copy"><span class="track-title">C’est La Vie</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 24. juli 2026</span></span></span>
+<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+</button>
+<button class="track" type="button" data-index="6" aria-label="Vælg hvor du vil lytte til Jeg Sagde Det Fint">
+<span class="cover"><img src="assets/jeg-sagde-det-fint.webp" alt="Cover til Jeg Sagde Det Fint" width="112" height="112" loading="lazy" decoding="async"></span>
+<span class="track-copy"><span class="track-title">Jeg Sagde Det Fint</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 17. juli 2026</span></span></span>
+<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+</button>
+<button class="track" type="button" data-index="7" aria-label="Vælg hvor du vil lytte til Yine">
+<span class="cover"><img src="assets/yine.webp" alt="Cover til Yine" width="112" height="112" loading="lazy" decoding="async"></span>
+<span class="track-copy"><span class="track-title">Yine</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 3. juli 2026</span></span></span>
+<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+</button>
+<button class="track" type="button" data-index="8" aria-label="Vælg hvor du vil lytte til Efter Solnedgang">
+<span class="cover"><img src="assets/efter-solnedgang.webp" alt="Cover til Efter Solnedgang" width="112" height="112" loading="lazy" decoding="async"></span>
+<span class="track-copy"><span class="track-title">Efter Solnedgang</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 19. juni 2026</span></span></span>
+<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+</button>
+<button class="track" type="button" data-index="9" aria-label="Vælg hvor du vil lytte til Şevên Dirêj (Lange Nætter)">
+<span class="cover"><img src="assets/seven-direj.webp" alt="Cover til Şevên Dirêj (Lange Nætter)" width="112" height="112" loading="lazy" decoding="async"></span>
+<span class="track-copy"><span class="track-title">Şevên Dirêj (Lange Nætter)</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 7. juni 2026</span></span></span>
+<span class="listen">LYT <span aria-hidden="true">↗</span></span>
+</button></div>
+</div></section>
+<section class="video-section" id="videoer" aria-labelledby="video-title"><div class="wrap">
+<div class="section-heading"><div class="eyebrow">YouTube Music</div><h2 id="video-title">Lyt med.</h2><p>Afspil udvalgte udgivelser direkte på siden.</p></div>
+<div class="video-grid">
+<article class="video-card"><div class="video-frame"><iframe loading="lazy" title="Nav Dilê Min — SYNQ Studios på YouTube" src="https://www.youtube-nocookie.com/embed/vHXKaHbS0_w" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-caption"><strong>Nav Dilê Min</strong><a href="https://music.youtube.com/watch?v=vHXKaHbS0_w" target="_blank" rel="noopener noreferrer">Åbn ↗</a></div></article>
+<article class="video-card"><div class="video-frame"><iframe loading="lazy" title="Ya Layali — SYNQ Studios på YouTube" src="https://www.youtube-nocookie.com/embed/ypyPki4PSSI" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-caption"><strong>Ya Layali</strong><a href="https://music.youtube.com/watch?v=ypyPki4PSSI" target="_blank" rel="noopener noreferrer">Åbn ↗</a></div></article>
+</div>
+</div></section>
+<section class="follow" id="foelg" aria-labelledby="follow-title"><div class="wrap">
+<div class="eyebrow">Følg med</div><h2 id="follow-title">Hold forbindelsen.</h2><p>Følg SYNQ STUDIOS for nye udgivelser, videoer og glimt fra musikuniverset.</p>
+<div class="social-grid">
+<a class="social-card" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>ABONNER ↗</span></a>
+<a class="social-card" href="https://www.instagram.com/synqstudiosofficial/" target="_blank" rel="noopener noreferrer"><strong>Instagram</strong><span>FØLG ↗</span></a>
+<a class="social-card" href="https://www.tiktok.com/@synqstudiosofficial" target="_blank" rel="noopener noreferrer"><strong>TikTok</strong><span>FØLG ↗</span></a>
+</div>
+</div></section>
 </main>
 <footer class="footer"><div class="wrap footer-row"><span>© 2026 SYNQ STUDIOS</span><strong>MUSIK UDEN GRÆNSER</strong></div></footer>
-</body>
-</html>
+<dialog class="player-modal" id="playerModal" aria-labelledby="modalTitle"><div class="modal-inner">
+<div class="modal-top"><span class="eyebrow">Vælg streamingtjeneste</span><button class="modal-close" id="closeModal" type="button" aria-label="Luk">×</button></div>
+<img class="modal-art" id="modalArt" src="assets/naar-lyset-slukker.webp" alt="Albumcover" width="112" height="112">
+<h2 class="modal-title" id="modalTitle">Når Lyset Slukker</h2><p class="modal-date" id="modalDate">SYNQ STUDIOS</p>
+<div class="platforms" id="platforms"></div>
+<p class="modal-note" id="modalNote"></p>
+</div></dialog>
+<script>
+const releases=[{"title":"Når Lyset Slukker","date":"13. oktober 2026","cover":"assets/naar-lyset-slukker.webp","apple":"https://music.apple.com/us/album/n%C3%A5r-lyset-slukker-single/6820073659","featured":true},{"title":"Stadig her","date":"2. oktober 2026","cover":"assets/stadig-her.webp","apple":"https://music.apple.com/us/album/stadig-her-single/6815765142"},{"title":"Bliv i nat","date":"13. september 2026","cover":"assets/bliv-i-nat.webp","apple":"https://music.apple.com/us/album/bliv-i-nat-single/6809608999"},{"title":"Nav Dilê Min","date":"30. august 2026","cover":"assets/nav-dile-min.webp","spotify":"https://open.spotify.com/album/4qrLPlQWKMrOqRK52nd0cN","apple":"https://music.apple.com/us/album/nav-dil%C3%AA-min-single/6804521538","youtube":"https://music.youtube.com/watch?v=vHXKaHbS0_w","tidal":"https://listen.tidal.com/track/554937995"},{"title":"Ya Layali","date":"14. august 2026","cover":"assets/ya-layali.webp","spotify":"https://open.spotify.com/album/6EDGPYUEu9rTaneGYA3MfS","apple":"https://music.apple.com/us/album/ya-layali-single/6799662976","youtube":"https://music.youtube.com/watch?v=ypyPki4PSSI","tidal":"https://listen.tidal.com/track/550584081"},{"title":"C’est La Vie","date":"24. juli 2026","cover":"assets/cest-la-vie.webp","spotify":"https://open.spotify.com/album/7jtdWeY2DH0aeF4ENKcLS3","apple":"https://music.apple.com/us/album/cest-la-vie-single/6793251720","youtube":"https://music.youtube.com/watch?v=eeItwKkW2K4","tidal":"https://listen.tidal.com/track/545191986"},{"title":"Jeg Sagde Det Fint","date":"17. juli 2026","cover":"assets/jeg-sagde-det-fint.webp","spotify":"https://open.spotify.com/album/1invWXVwui2rPrVcV1ysHh","apple":"https://music.apple.com/us/album/jeg-sagde-det-fint-single/6789707472","youtube":"https://music.youtube.com/watch?v=WZb10iHtm5Q","tidal":"https://listen.tidal.com/track/542072563"},{"title":"Yine","date":"3. juli 2026","cover":"assets/yine.webp","spotify":"https://open.spotify.com/album/3EIAV5yRtvWQ8Oti6YjhNI","apple":"https://music.apple.com/us/album/yine-single/6785310701","youtube":"https://music.youtube.com/watch?v=vb7Nt68Qm5w","tidal":"https://listen.tidal.com/track/537751026"},{"title":"Efter Solnedgang","date":"19. juni 2026","cover":"assets/efter-solnedgang.webp","spotify":"https://open.spotify.com/album/1ftMuSHGfNxa2P2WnyWpbX","apple":"https://music.apple.com/us/album/efter-solnedgang-single/6781952013","youtube":"https://music.youtube.com/watch?v=KzYwpfTMTEI","tidal":"https://listen.tidal.com/track/534424523"},{"title":"Şevên Dirêj (Lange Nætter)","date":"7. juni 2026","cover":"assets/seven-direj.webp","spotify":"https://open.spotify.com/album/1h6AjKbMuBsid7tADx0mSp","apple":"https://music.apple.com/us/album/%C5%9Fev%C3%AAn-d%C4%B1r%C3%AAj-lange-n%C3%A6tter-single/6775276091","youtube":"https://music.youtube.com/watch?v=bE-PxnigF0c","tidal":"https://listen.tidal.com/track/529542660"}];
+const channel="https://www.youtube.com/@SYNQ_STUDIOS";
+const dialog=document.getElementById("playerModal");
+const platforms=document.getElementById("platforms");
+function openRelease(index){
+ const release=releases[index];
+ if(!release)return;
+ document.getElementById("modalTitle").textContent=release.title;
+ document.getElementById("modalDate").textContent="SYNQ STUDIOS · "+release.date;
+ const art=document.getElementById("modalArt");art.src=release.cover;art.alt="Cover til "+release.title;
+ platforms.replaceChildren();
+ const links=[["Spotify",release.spotify],["Apple Music",release.apple],["YouTube Music",release.youtube],["TIDAL",release.tidal]].filter(item=>Boolean(item[1]));
+ if(!release.youtube)links.push(["Besøg YouTube-kanalen",channel]);
+ links.forEach(item=>{
+  const a=document.createElement("a");a.className="platform";a.href=item[1];a.target="_blank";a.rel="noopener noreferrer";
+  const label=document.createElement("span");label.textContent=item[0];const arrow=document.createElement("span");arrow.textContent="↗";
+  a.append(label,arrow);platforms.append(a);
+ });
+ document.getElementById("modalNote").textContent=release.youtube?"Alle links går direkte til den valgte udgivelse.":"Apple Music-linket går direkte til sangen. YouTube-linket åbner den officielle kanal.";
+ if(!dialog.open)dialog.showModal();
+}
+document.querySelectorAll("[data-index]").forEach(button=>button.addEventListener("click",()=>openRelease(Number(button.dataset.index))));
+document.getElementById("closeModal").addEventListener("click",()=>dialog.close());
+dialog.addEventListener("click",event=>{if(event.target===dialog)dialog.close()});
+</script>
+</body></html>
