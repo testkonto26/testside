@@ -28,19 +28,24 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 .navlinks{display:flex;align-items:center;gap:25px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d6d1c8}
 .navlinks a:hover{color:var(--gold-light)}
 .navcta{border:1px solid rgba(201,169,109,.45);border-radius:999px;padding:11px 17px;color:var(--gold-light)}
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 78% 40%,rgba(201,169,109,.095),transparent 43%),linear-gradient(115deg,#080807,#11100e)}
-.hero:before{content:"";position:absolute;right:-12%;top:-55%;width:520px;height:520px;border:1px solid rgba(201,169,109,.12);border-radius:50%;pointer-events:none}
-.hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 260px;align-items:center;gap:52px;padding:64px 0}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 82% 47%,rgba(201,169,109,.13),transparent 44%),linear-gradient(112deg,#080807,#11100e)}
+.hero:before{content:"";position:absolute;right:-15%;top:-30%;width:740px;height:740px;border:1px solid rgba(201,169,109,.17);border-radius:50%;pointer-events:none;box-shadow:0 0 0 105px rgba(201,169,109,.012)}
+.hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 355px;align-items:center;gap:70px;padding:68px 0;min-height:560px}
 .hero-copy{min-width:0}
-.eyebrow{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:700}
-.hero h1{font-size:clamp(48px,6vw,72px);font-weight:800;line-height:1.05;letter-spacing:-.065em;margin:18px 0 16px}
-.hero p{font-size:12px;letter-spacing:.16em;color:#aaa59b;margin:0;font-weight:600}
-.hero-listen{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:46px;padding:0 24px;border:1px solid var(--gold);border-radius:999px;color:var(--gold-light);font-size:13px;font-weight:800;letter-spacing:.16em;margin-top:27px;transition:background .2s,color .2s,transform .2s}
-.hero-listen:hover{background:var(--gold);color:#111;transform:translateY(-2px)}
-.hero-listen:focus-visible,.hero-art:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
-.hero-art{display:block;width:260px;aspect-ratio:1;border-radius:18px;overflow:hidden;border:1px solid rgba(201,169,109,.26);box-shadow:0 22px 65px rgba(0,0,0,.46);transition:transform .25s,border-color .25s}
-.hero-art:hover{transform:translateY(-3px);border-color:var(--gold)}
+.eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.hero h1{font-size:clamp(62px,7.5vw,100px);font-weight:800;line-height:1.01;letter-spacing:-.075em;margin:26px 0 26px}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero p{font-size:13px;letter-spacing:.16em;color:#bcb6aa;margin:0;font-weight:600}
+.hero-release{position:relative;min-width:0;border:1px solid rgba(201,169,109,.66);border-radius:22px;background:linear-gradient(150deg,rgba(201,169,109,.075),rgba(12,11,10,.88) 62%);padding:17px;box-shadow:0 20px 70px rgba(0,0,0,.4)}
+.hero-art{display:block;width:100%;aspect-ratio:1;border-radius:13px;overflow:hidden;border:1px solid rgba(201,169,109,.17);background:#171612;transition:transform .25s,border-color .25s}
+.hero-art:hover{transform:translateY(-2px);border-color:var(--gold)}
 .hero-art img{display:block;width:100%;height:100%;object-fit:cover}
+.hero-release-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 2px 1px}
+.hero-release-caption{color:var(--gold);font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;line-height:1.6}
+.hero-listen{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:48px;padding:0 26px;border:1px solid var(--gold);border-radius:999px;background:var(--gold);color:#17130b;font-size:13px;font-weight:800;letter-spacing:.14em;transition:background .2s,color .2s,transform .2s;white-space:nowrap}
+.hero-listen:hover{background:var(--gold-light);color:#0c0b08;transform:translateY(-2px)}
+.hero-listen:focus-visible,.hero-art:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
+.hero-listen .arrow-icon{color:inherit}
 .releases-section{padding:85px 0 96px}
 .release-heading{padding-bottom:42px;border-bottom:1px solid var(--line)}
 .release-heading h2,.section-heading h2{font-size:clamp(43px,7vw,67px);line-height:1;letter-spacing:-.055em;font-weight:800;margin:15px 0 19px}
@@ -91,14 +96,17 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 @media(max-width:760px){.video-grid{grid-template-columns:1fr}.social-grid{grid-template-columns:1fr}.social-card{min-height:100px;flex-direction:row;align-items:center}.social-card strong{font-size:21px}}
 @media(max-width:650px){
 .wrap{width:calc(100% - 36px)}.topbar{height:68px}.brand{font-size:12px;letter-spacing:.24em}.navlinks{gap:12px;font-size:9px}.navlinks a:first-child{display:none}.navcta{padding:9px 12px}
-.hero-inner{grid-template-columns:minmax(0,1fr) 128px;gap:15px;padding:43px 0 46px}.hero:before{width:320px;height:320px;right:-55%;top:-20%}
-.hero .eyebrow{font-size:9px;letter-spacing:.11em;line-height:1.6}.hero h1{font-size:clamp(27px,7.5vw,36px);line-height:1.1;margin:12px 0 11px}.hero p{font-size:10px}.hero-listen{min-height:39px;padding:0 20px;margin-top:20px;font-size:11px;gap:9px}.hero-art{width:128px;border-radius:12px}
+.hero-inner{display:flex;flex-direction:column;align-items:stretch;gap:30px;min-height:0;padding:66px 0 64px}.hero:before{width:490px;height:490px;right:-98%;top:5%;box-shadow:0 0 0 75px rgba(201,169,109,.012)}
+.hero .eyebrow{font-size:10px;letter-spacing:.19em;line-height:1.6}.hero h1{font-size:clamp(53px,14.2vw,69px);line-height:1.04;margin:21px 0 22px}.hero p{font-size:11px;letter-spacing:.17em}
+.hero-release{display:grid;grid-template-columns:160px minmax(0,1fr);align-items:center;gap:16px;padding:13px;border-radius:18px;min-height:187px}.hero-art{width:160px;border-radius:12px}
+.hero-release-actions{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:18px;padding:0}.hero-release-caption{font-size:9px;letter-spacing:.13em}
+.hero-listen{min-height:46px;padding:0 13px;gap:10px;font-size:12px;width:100%}
 .releases-section{padding:58px 0 68px}.release-heading{padding-bottom:31px}.release-heading h2,.section-heading h2{font-size:clamp(40px,11vw,56px)}.release-heading p{font-size:13px}
 .track{grid-template-columns:61px minmax(0,1fr) auto;min-height:86px;gap:12px;padding:9px 3px}
 .cover{width:59px;border-radius:9px}.track-title{font-size:15px;line-height:1.18}.track-copy{gap:6px}.track-meta{font-size:9px;letter-spacing:.11em}.release-date{display:none}.listen{font-size:11px;letter-spacing:.1em;padding:8px 0 8px 4px}
 .video-section{padding:58px 0 64px}.video-caption{padding:16px}.follow{padding:65px 0}.social-card{padding:20px}.footer-row{align-items:flex-start;flex-direction:column}
 }
-@media(max-width:370px){.wrap{width:calc(100% - 28px)}.hero-inner{grid-template-columns:minmax(0,1fr) 108px;gap:12px}.hero-art{width:108px}.hero h1{font-size:27px}.track{grid-template-columns:55px minmax(0,1fr) auto;gap:9px}.cover{width:52px}.track-title{font-size:14px}.track-meta{font-size:8px}.listen{font-size:10px}}
+@media(max-width:370px){.wrap{width:calc(100% - 28px)}.hero-inner{gap:25px;padding:55px 0 55px}.hero h1{font-size:clamp(46px,13.8vw,52px)}.hero-release{grid-template-columns:143px minmax(0,1fr);gap:12px;padding:10px;min-height:163px}.hero-art{width:143px}.hero-release-caption{font-size:8px}.hero-listen{min-height:42px;padding:0 10px;font-size:11px}.track{grid-template-columns:55px minmax(0,1fr) auto;gap:9px}.cover{width:52px}.track-title{font-size:14px}.track-meta{font-size:8px}.listen{font-size:10px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -112,11 +120,13 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 <section class="hero" aria-labelledby="hero-title"><div class="wrap"><div class="hero-inner">
 <div class="hero-copy">
 <div class="eyebrow">Seneste udgivelse · 13. oktober 2026</div>
-<h1 id="hero-title">Når Lyset<br>Slukker</h1>
-<p>SYNQ STUDIOS</p>
-<a class="hero-listen" href="sange/naar-lyset-slukker/" aria-label="Lyt til Når Lyset Slukker">LYT <span class="arrow-icon" aria-hidden="true"></span></a>
+<h1 id="hero-title">Når Lyset<br><em>Slukker.</em></h1>
+<p>SYNQ STUDIOS · 2026</p>
 </div>
-<a class="hero-art" href="sange/naar-lyset-slukker/" aria-label="Åbn Når Lyset Slukker"><img src="assets/naar-lyset-slukker.webp" alt="Cover til Når Lyset Slukker" width="520" height="520" fetchpriority="high" decoding="async"></a>
+<div class="hero-release">
+<a class="hero-art" href="sange/naar-lyset-slukker/" aria-label="Åbn Når Lyset Slukker"><img src="assets/naar-lyset-slukker.webp" alt="Cover til Når Lyset Slukker" width="640" height="640" fetchpriority="high" decoding="async"></a>
+<div class="hero-release-actions"><span class="hero-release-caption">NY SINGLE</span><a class="hero-listen" href="sange/naar-lyset-slukker/" aria-label="Lyt til Når Lyset Slukker">LYT <span class="arrow-icon" aria-hidden="true"></span></a></div>
+</div>
 </div></div></section>
 <section class="releases-section" id="udgivelser" aria-labelledby="releases-title"><div class="wrap">
 <div class="release-heading"><div class="eyebrow">SYNQ STUDIOS · 2026</div><h2 id="releases-title">Udgivelser</h2><p>10 udgivelser · 2026</p></div>
