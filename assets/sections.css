@@ -15,6 +15,7 @@ a{color:inherit;text-decoration:none}.wrap{width:min(1050px,calc(100% - 60px));m
 .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .page-hero h1{font-size:clamp(60px,10vw,105px);line-height:1;letter-spacing:-.075em;font-weight:800;margin:24px 0 22px}
 .gold-dot{color:var(--gold)}.page-hero p{max-width:620px;font-size:17px;line-height:1.8;color:#c2bdb2;margin:0}
+.page-hero .streams-updated{margin-top:18px;font-size:13px;line-height:1.5;color:var(--gold-light);font-style:italic}
 .page-content{min-height:380px;padding:65px 0 100px}
 .draft-panel{position:relative;max-width:760px;border:1px solid rgba(201,169,109,.32);border-radius:20px;background:linear-gradient(140deg,rgba(201,169,109,.07),#11100f 55%);padding:45px 42px}
 .draft-kicker{font-size:10px;letter-spacing:.23em;text-transform:uppercase;color:var(--gold);font-weight:800}

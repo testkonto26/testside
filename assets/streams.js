@@ -9,7 +9,7 @@
  if(!url)return;
  const list=document.querySelector('[data-sort-streams="desc"]');
  const nf=new Intl.NumberFormat('da-DK');
- const df=new Intl.DateTimeFormat('da-DK',{day:'numeric',month:'short',year:'numeric',timeZone:'Europe/Copenhagen'});
+ const df=new Intl.DateTimeFormat('da-DK',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Copenhagen'});
  function totalFor(entry){
   if(!entry)return null;
   const counts=[entry.am,entry.sp,entry.yt];
@@ -26,10 +26,19 @@
     const entry=tracks[node.dataset.streamId];
     const total=totalFor(entry);
     if(total===null)return;
-    const date=/^\d{4}-\d{2}-\d{2}$/.test(entry.updatedAt||'')
-     ?' (opdateret '+df.format(new Date(entry.updatedAt+'T12:00:00Z'))+')':'';
-    node.textContent=nf.format(total)+' streams'+date;
-   });
+    node.textContent=nf.format(total)+' streams';   });
+   const updatedTime=document.querySelector('.streams-updated time');
+   if(updatedTime){
+    const validDates=Object.values(tracks)
+     .map(function(entry){return entry&&entry.updatedAt;})
+     .filter(function(value){return /^\d{4}-\d{2}-\d{2}$/.test(value||'');})
+     .sort();
+    if(validDates.length){
+     const latest=validDates[validDates.length-1];
+     updatedTime.dateTime=latest;
+     updatedTime.textContent=df.format(new Date(latest+'T12:00:00Z'));
+    }
+   }
    if(list){
     const rows=Array.from(list.children).filter(function(node){return node.matches('a.track');});
     const ranked=rows.map(function(node,index){
