@@ -47,6 +47,7 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 .track-list{display:block}
 .track{width:100%;appearance:none;text-align:left;cursor:pointer;color:var(--white);border:0;border-bottom:1px solid var(--line);background:transparent;display:grid;grid-template-columns:78px minmax(0,1fr) auto;align-items:center;gap:18px;padding:12px 10px;min-height:105px;transition:background .2s}
 .track:hover{background:rgba(255,255,255,.027)}
+.track:visited{color:var(--white)}
 .track:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .track.featured{margin-top:2px;grid-template-columns:112px minmax(0,1fr) auto;gap:24px;min-height:166px;padding:19px 20px;border:2px solid var(--gold);border-radius:19px;background:linear-gradient(110deg,rgba(201,169,109,.085),rgba(201,169,109,.018) 60%,transparent);box-shadow:0 0 0 1px rgba(201,169,109,.05)}
 .cover{display:block;width:74px;aspect-ratio:1;overflow:hidden;border-radius:10px;background:#171715;box-shadow:0 0 0 1px rgba(255,255,255,.09)}
@@ -86,18 +87,6 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 .footer{padding:27px 0 calc(27px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:#89867e;font-size:10px;letter-spacing:.14em}
 .footer-row{display:flex;justify-content:space-between;gap:18px;align-items:center}
 .footer strong{color:#d5cfc4;letter-spacing:.17em}
-.player-modal{width:min(470px,calc(100% - 28px));max-height:min(90dvh,740px);padding:0;border:1px solid rgba(201,169,109,.48);border-radius:23px;background:#10100e;color:var(--white);box-shadow:0 30px 100px rgba(0,0,0,.75);overflow:auto}
-.player-modal::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(5px)}
-.modal-inner{padding:28px}
-.modal-top{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.modal-close{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:#1a1a18;color:#fff;font-size:24px;cursor:pointer}
-.modal-art{width:112px;height:112px;border-radius:13px;object-fit:cover;margin:25px 0 18px;border:1px solid var(--line)}
-.modal-title{font-size:29px;letter-spacing:-.045em;line-height:1.14;margin:0}
-.modal-date{color:var(--muted);font-size:12px;margin:10px 0 24px}
-.platforms{display:grid;gap:10px}
-.platform{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:52px;padding:0 17px;border:1px solid var(--line);border-radius:12px;background:#191917;color:#f5f2eb;font-size:14px;font-weight:700;transition:border-color .2s}
-.platform:hover,.platform:focus-visible{border-color:var(--gold);color:var(--gold-light)}
-.modal-note{font-size:11px;color:var(--muted);line-height:1.6;margin:18px 0 0}
 @media(max-width:760px){.video-grid{grid-template-columns:1fr}.social-grid{grid-template-columns:1fr}.social-card{min-height:100px;flex-direction:row;align-items:center}.social-card strong{font-size:21px}}
 @media(max-width:650px){
 .wrap{width:calc(100% - 36px)}.topbar{height:68px}.brand{font-size:12px;letter-spacing:.24em}.navlinks{gap:12px;font-size:9px}.navlinks a:first-child{display:none}.navcta{padding:9px 12px}
@@ -127,56 +116,56 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 </div></div></section>
 <section class="releases-section" id="udgivelser" aria-labelledby="releases-title"><div class="wrap">
 <div class="release-heading"><div class="eyebrow">SYNQ STUDIOS · 2026</div><h2 id="releases-title">Udgivelser</h2><p>10 udgivelser · 2026</p></div>
-<div class="track-list"><button class="track featured" type="button" data-index="0" aria-label="Vælg hvor du vil lytte til Når Lyset Slukker">
+<div class="track-list"><a class="track featured" href="sange/naar-lyset-slukker/" aria-label="Åbn sangsiden for Når Lyset Slukker">
 <span class="cover"><img src="assets/naar-lyset-slukker.webp" alt="Cover til Når Lyset Slukker" width="112" height="112" fetchpriority="high" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Når Lyset Slukker</span><span class="track-meta latest">SENESTE UDGIVELSE<span class="release-date"> · 13. oktober 2026</span></span></span>
 <span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
-</button>
-<button class="track" type="button" data-index="1" aria-label="Vælg hvor du vil lytte til Stadig her">
+</a>
+<a class="track" href="sange/stadig-her/" aria-label="Åbn sangsiden for Stadig her">
 <span class="cover"><img src="assets/stadig-her.webp" alt="Cover til Stadig her" width="112" height="112" fetchpriority="high" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Stadig her</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 2. oktober 2026</span></span></span>
 <span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
-</button>
-<button class="track" type="button" data-index="2" aria-label="Vælg hvor du vil lytte til Bliv i nat">
+</a>
+<a class="track" href="sange/bliv-i-nat/" aria-label="Åbn sangsiden for Bliv i nat">
 <span class="cover"><img src="assets/bliv-i-nat.webp" alt="Cover til Bliv i nat" width="112" height="112" fetchpriority="high" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Bliv i nat</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 13. september 2026</span></span></span>
 <span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
-</button>
-<button class="track" type="button" data-index="3" aria-label="Vælg hvor du vil lytte til Nav Dilê Min">
+</a>
+<a class="track" href="sange/nav-dile-min/" aria-label="Åbn sangsiden for Nav Dilê Min">
 <span class="cover"><img src="assets/nav-dile-min.webp" alt="Cover til Nav Dilê Min" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Nav Dilê Min</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 30. august 2026</span></span></span>
 <span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
-</button>
-<button class="track" type="button" data-index="4" aria-label="Vælg hvor du vil lytte til Ya Layali">
+</a>
+<a class="track" href="sange/ya-layali/" aria-label="Åbn sangsiden for Ya Layali">
 <span class="cover"><img src="assets/ya-layali.webp" alt="Cover til Ya Layali" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Ya Layali</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 14. august 2026</span></span></span>
 <span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
-</button>
-<button class="track" type="button" data-index="5" aria-label="Vælg hvor du vil lytte til C’est La Vie">
+</a>
+<a class="track" href="sange/cest-la-vie/" aria-label="Åbn sangsiden for C’est La Vie">
 <span class="cover"><img src="assets/cest-la-vie.webp" alt="Cover til C’est La Vie" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">C’est La Vie</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 24. juli 2026</span></span></span>
 <span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
-</button>
-<button class="track" type="button" data-index="6" aria-label="Vælg hvor du vil lytte til Jeg Sagde Det Fint">
+</a>
+<a class="track" href="sange/jeg-sagde-det-fint/" aria-label="Åbn sangsiden for Jeg Sagde Det Fint">
 <span class="cover"><img src="assets/jeg-sagde-det-fint.webp" alt="Cover til Jeg Sagde Det Fint" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Jeg Sagde Det Fint</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 17. juli 2026</span></span></span>
 <span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
-</button>
-<button class="track" type="button" data-index="7" aria-label="Vælg hvor du vil lytte til Yine">
+</a>
+<a class="track" href="sange/yine/" aria-label="Åbn sangsiden for Yine">
 <span class="cover"><img src="assets/yine.webp" alt="Cover til Yine" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Yine</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 3. juli 2026</span></span></span>
 <span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
-</button>
-<button class="track" type="button" data-index="8" aria-label="Vælg hvor du vil lytte til Efter Solnedgang">
+</a>
+<a class="track" href="sange/efter-solnedgang/" aria-label="Åbn sangsiden for Efter Solnedgang">
 <span class="cover"><img src="assets/efter-solnedgang.webp" alt="Cover til Efter Solnedgang" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Efter Solnedgang</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 19. juni 2026</span></span></span>
 <span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
-</button>
-<button class="track" type="button" data-index="9" aria-label="Vælg hvor du vil lytte til Şevên Dirêj (Lange Nætter)">
+</a>
+<a class="track" href="sange/seven-direj/" aria-label="Åbn sangsiden for Şevên Dirêj (Lange Nætter)">
 <span class="cover"><img src="assets/seven-direj.webp" alt="Cover til Şevên Dirêj (Lange Nætter)" width="112" height="112" loading="lazy" decoding="async"></span>
 <span class="track-copy"><span class="track-title">Şevên Dirêj (Lange Nætter)</span><span class="track-meta">SYNQ STUDIOS<span class="release-date"> · 7. juni 2026</span></span></span>
 <span class="listen">LYT <span aria-hidden="true"><span class="arrow-icon" aria-hidden="true"></span></span></span>
-</button></div>
+</a></div>
 </div></section>
 <section class="video-section" id="videoer" aria-labelledby="video-title"><div class="wrap">
 <div class="section-heading"><div class="eyebrow">YouTube Music</div><h2 id="video-title">Lyt med.</h2><p>Afspil udvalgte udgivelser direkte på siden.</p></div>
@@ -195,37 +184,4 @@ button{font:inherit}a{color:inherit;text-decoration:none}
 </div></section>
 </main>
 <footer class="footer"><div class="wrap footer-row"><span>© 2026 SYNQ STUDIOS</span><strong>MUSIK UDEN GRÆNSER</strong></div></footer>
-<dialog class="player-modal" id="playerModal" aria-labelledby="modalTitle"><div class="modal-inner">
-<div class="modal-top"><span class="eyebrow">Vælg streamingtjeneste</span><button class="modal-close" id="closeModal" type="button" aria-label="Luk">×</button></div>
-<img class="modal-art" id="modalArt" src="assets/naar-lyset-slukker.webp" alt="Albumcover" width="112" height="112">
-<h2 class="modal-title" id="modalTitle">Når Lyset Slukker</h2><p class="modal-date" id="modalDate">SYNQ STUDIOS</p>
-<div class="platforms" id="platforms"></div>
-<p class="modal-note" id="modalNote"></p>
-</div></dialog>
-<script>
-const releases=[{"title":"Når Lyset Slukker","date":"13. oktober 2026","cover":"assets/naar-lyset-slukker.webp","apple":"https://music.apple.com/us/album/n%C3%A5r-lyset-slukker-single/6820073659","featured":true},{"title":"Stadig her","date":"2. oktober 2026","cover":"assets/stadig-her.webp","apple":"https://music.apple.com/us/album/stadig-her-single/6815765142"},{"title":"Bliv i nat","date":"13. september 2026","cover":"assets/bliv-i-nat.webp","apple":"https://music.apple.com/us/album/bliv-i-nat-single/6809608999"},{"title":"Nav Dilê Min","date":"30. august 2026","cover":"assets/nav-dile-min.webp","spotify":"https://open.spotify.com/album/4qrLPlQWKMrOqRK52nd0cN","apple":"https://music.apple.com/us/album/nav-dil%C3%AA-min-single/6804521538","youtube":"https://music.youtube.com/watch?v=vHXKaHbS0_w","tidal":"https://listen.tidal.com/track/554937995"},{"title":"Ya Layali","date":"14. august 2026","cover":"assets/ya-layali.webp","spotify":"https://open.spotify.com/album/6EDGPYUEu9rTaneGYA3MfS","apple":"https://music.apple.com/us/album/ya-layali-single/6799662976","youtube":"https://music.youtube.com/watch?v=ypyPki4PSSI","tidal":"https://listen.tidal.com/track/550584081"},{"title":"C’est La Vie","date":"24. juli 2026","cover":"assets/cest-la-vie.webp","spotify":"https://open.spotify.com/album/7jtdWeY2DH0aeF4ENKcLS3","apple":"https://music.apple.com/us/album/cest-la-vie-single/6793251720","youtube":"https://music.youtube.com/watch?v=eeItwKkW2K4","tidal":"https://listen.tidal.com/track/545191986"},{"title":"Jeg Sagde Det Fint","date":"17. juli 2026","cover":"assets/jeg-sagde-det-fint.webp","spotify":"https://open.spotify.com/album/1invWXVwui2rPrVcV1ysHh","apple":"https://music.apple.com/us/album/jeg-sagde-det-fint-single/6789707472","youtube":"https://music.youtube.com/watch?v=WZb10iHtm5Q","tidal":"https://listen.tidal.com/track/542072563"},{"title":"Yine","date":"3. juli 2026","cover":"assets/yine.webp","spotify":"https://open.spotify.com/album/3EIAV5yRtvWQ8Oti6YjhNI","apple":"https://music.apple.com/us/album/yine-single/6785310701","youtube":"https://music.youtube.com/watch?v=vb7Nt68Qm5w","tidal":"https://listen.tidal.com/track/537751026"},{"title":"Efter Solnedgang","date":"19. juni 2026","cover":"assets/efter-solnedgang.webp","spotify":"https://open.spotify.com/album/1ftMuSHGfNxa2P2WnyWpbX","apple":"https://music.apple.com/us/album/efter-solnedgang-single/6781952013","youtube":"https://music.youtube.com/watch?v=KzYwpfTMTEI","tidal":"https://listen.tidal.com/track/534424523"},{"title":"Şevên Dirêj (Lange Nætter)","date":"7. juni 2026","cover":"assets/seven-direj.webp","spotify":"https://open.spotify.com/album/1h6AjKbMuBsid7tADx0mSp","apple":"https://music.apple.com/us/album/%C5%9Fev%C3%AAn-d%C4%B1r%C3%AAj-lange-n%C3%A6tter-single/6775276091","youtube":"https://music.youtube.com/watch?v=bE-PxnigF0c","tidal":"https://listen.tidal.com/track/529542660"}];
-const channel="https://www.youtube.com/@SYNQ_STUDIOS";
-const dialog=document.getElementById("playerModal");
-const platforms=document.getElementById("platforms");
-function openRelease(index){
- const release=releases[index];
- if(!release)return;
- document.getElementById("modalTitle").textContent=release.title;
- document.getElementById("modalDate").textContent="SYNQ STUDIOS · "+release.date;
- const art=document.getElementById("modalArt");art.src=release.cover;art.alt="Cover til "+release.title;
- platforms.replaceChildren();
- const links=[["Spotify",release.spotify],["Apple Music",release.apple],["YouTube Music",release.youtube],["TIDAL",release.tidal]].filter(item=>Boolean(item[1]));
- if(!release.youtube)links.push(["Besøg YouTube-kanalen",channel]);
- links.forEach(item=>{
-  const a=document.createElement("a");a.className="platform";a.href=item[1];a.target="_blank";a.rel="noopener noreferrer";
-  const label=document.createElement("span");label.textContent=item[0];const arrow=document.createElement("span");arrow.className="arrow-icon";arrow.setAttribute("aria-hidden","true");
-  a.append(label,arrow);platforms.append(a);
- });
- document.getElementById("modalNote").textContent=release.youtube?"Alle links går direkte til den valgte udgivelse.":"Apple Music-linket går direkte til sangen. YouTube-linket åbner den officielle kanal.";
- if(!dialog.open)dialog.showModal();
-}
-document.querySelectorAll("[data-index]").forEach(button=>button.addEventListener("click",()=>openRelease(Number(button.dataset.index))));
-document.getElementById("closeModal").addEventListener("click",()=>dialog.close());
-dialog.addEventListener("click",event=>{if(event.target===dialog)dialog.close()});
-</script>
 </body></html>
