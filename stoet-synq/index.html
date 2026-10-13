@@ -1,16 +1,48 @@
 <!doctype html>
-<html lang="da"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#080807"><meta name="description" content="Hjælp med at give plads til mere musik og nye idéer.">
-<title>Støt SYNQ — SYNQ STUDIOS</title>
+<html lang="da">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080807">
+<meta name="description" content="SYNQ Stories: Del din historie anonymt, giv andre mulighed for at like den, og inspirer måske den næste sang fra SYNQ Studios. Alle historier godkendes før offentliggørelse.">
+<title>SYNQ Stories — SYNQ STUDIOS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/sections.css"><link rel="stylesheet" href="../assets/site-menu.css">
+<link rel="stylesheet" href="../assets/sections.css"><link rel="stylesheet" href="../assets/site-menu.css"><link rel="stylesheet" href="../assets/stories.css">
 <script src="../assets/site-menu.js" defer></script>
-</head><body>
+<script src="../assets/stories-config.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+<script src="../assets/stories.js" defer></script>
+</head>
+<body>
 <a class="skip" href="#main">Spring til indhold</a>
-<header class="topbar"><div class="wrap nav"><a class="brand" href="../" aria-label="SYNQ STUDIOS — forside">SYNQ STUDIOS</a><nav class="navlinks" aria-label="Hovedmenu"><a class="navcta" href="../#foelg">Følg os</a><details class="site-menu"><summary class="site-menu-toggle" aria-label="Åbn menu"><span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span></summary><div class="site-menu-panel" aria-label="Sidemenu"><a href="../">Forside</a><a href="../om-synq/">Om SYNQ</a><a href="../udgivelser/">Udgivelser</a><a href="../synq-game/">SYNQ Game</a><a href="../stoet-synq/" aria-current="page">Støt SYNQ</a></div></details></nav></div></header>
-<main id="main"><section class="page-hero"><div class="wrap"><div class="eyebrow">VÆR MED</div><h1>Støt SYNQ<span class="gold-dot">.</span></h1><p>Hjælp med at give plads til mere musik og nye idéer.</p></div></section>
-<section class="page-content"><div class="wrap"><div class="draft-panel"><div class="draft-kicker">STØTTEMULIGHEDER PÅ VEJ</div><h2>Støt projektet</h2><p>Vi arbejder på en enkel og sikker måde at støtte SYNQ Studios på. Der kan endnu ikke doneres via denne side.</p><a class="draft-link" href="../udgivelser/">Lyt til musikken <span class="arrow-icon" aria-hidden="true"></span></a></div></div></section></main>
+<header class="topbar"><div class="wrap nav"><a class="brand" href="../" aria-label="SYNQ STUDIOS — forside">SYNQ STUDIOS</a><nav class="navlinks" aria-label="Hovedmenu"><a class="navcta" href="../#foelg">Følg os</a><details class="site-menu"><summary class="site-menu-toggle" aria-label="Åbn menu"><span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></summary><div class="site-menu-panel" aria-label="Sidemenu"><a href="../">Forside</a><a href="../om-synq/">Om SYNQ</a><a href="../udgivelser/">Udgivelser</a><a href="../synq-game/">SYNQ Game</a><a href="../stoet-synq/" aria-current="page">SYNQ Stories</a></div></details></nav></div></header>
+<main id="main">
+<section class="page-hero stories-hero"><div class="wrap"><div class="eyebrow">DIN HISTORIE KAN BLIVE TIL MUSIK</div><h1>SYNQ Stories<span class="gold-dot">.</span></h1><p>Nogle historier fortjener at blive hørt. Del din anonymt, og vær med til at inspirere musikken.</p></div></section>
+<section class="stories-intro"><div class="wrap stories-intro-grid"><div><div class="draft-kicker">ET FÆLLESSKAB AF FORTÆLLINGER</div><h2>Din historie.<br><span>Vores inspiration.</span></h2></div><div class="stories-intro-copy"><p>Et minde, en tanke, et øjeblik eller noget, du aldrig fik sagt. Her kan du dele en historie uden at oplyse dit navn.</p><p>Alle indsendelser gennemgås af SYNQ Studios, før de eventuelt vises. Andre kan like de offentliggjorte historier, og måske bliver en af dem inspiration til en kommende sang.</p></div></div></section>
+<section class="stories-compose" id="del-historie" aria-labelledby="compose-title"><div class="wrap">
+<div class="stories-section-label"><span>01 / DEL DIN HISTORIE</span><span>INGEN PROFIL NØDVENDIG</span></div>
+<div class="stories-compose-layout">
+<div class="stories-compose-head"><h2 id="compose-title">Hvad vil du fortælle?</h2><p>Det behøver ikke være en færdig sangtekst. Fortæl med dine egne ord – vi arbejder videre med idéen, hvis den inspirerer os.</p><div class="stories-privacy"><strong>Vigtigt om anonymitet</strong><p>Skriv ikke navne, brugernavne, adresser, telefonnumre, e-mails eller andre oplysninger, som kan identificere dig eller andre. Historier med personoplysninger afvises og slettes. Undlad også følsomme eller meget private oplysninger.</p></div></div>
+<form id="story-form" class="story-form" novalidate>
+<div class="field"><label for="story-title">Titel på din historie <span aria-hidden="true">*</span></label><input id="story-title" name="title" type="text" minlength="6" maxlength="90" placeholder="F.eks. Det, jeg aldrig fik sagt" required autocomplete="off"><small>Mellem 6 og 90 tegn.</small></div>
+<div class="field"><label for="story-text">Din historie <span aria-hidden="true">*</span></label><textarea id="story-text" name="story" rows="8" minlength="80" maxlength="2500" placeholder="Fortæl din historie her..." required></textarea><small><span>Mindst 80 tegn. Ingen navne eller personoplysninger.</span><span id="story-count">0 / 2.500</span></small></div>
+<div class="story-agreements"><div class="agreement-heading">Læs og bekræft begge punkter</div>
+<label class="story-check"><input type="checkbox" id="agree-rights" required><span><strong>1. Brug af historien og rettigheder</strong>Jeg giver SYNQ Studios tilladelse til at bruge, omskrive og videreudvikle min historie som inspiration til nye sangtekster og musik. SYNQ bestemmer selv over de nye værker og eventuelle udgivelser, også kommercielt, uden krav om betaling, medbestemmelse eller kreditering fra mig, i det omfang loven tillader det. Jeg beholder eventuelle rettigheder til min oprindelige historie.</span></label>
+<label class="story-check"><input type="checkbox" id="agree-privacy" required><span><strong>2. Anonymitet og offentliggørelse</strong>Jeg er mindst 18 år, har ret til at dele historien og bekræfter, at den ikke indeholder navne eller identificerende oplysninger om mig eller andre. Jeg accepterer, at SYNQ efter godkendelse kan offentliggøre historien anonymt. Historier med personoplysninger afvises og slettes.</span></label>
+</div>
+<p class="form-fineprint">Indsendelse garanterer ikke offentliggørelse eller en sang. Der kræves ikke navn eller e-mail. Driftstjenester kan behandle tekniske oplysninger; vi kan derfor ikke garantere fuldstændig teknisk anonymitet.</p>
+<div id="story-form-status" class="story-status" role="status" aria-live="polite">Indsendelser åbner snart.</div>
+<button id="story-submit" class="story-primary" type="submit" disabled>Send historie <span aria-hidden="true">↗</span></button>
+</form>
+</div></div></section>
+<section class="stories-feed-section" id="historier" aria-labelledby="stories-feed-title"><div class="wrap">
+<div class="stories-section-label"><span>02 / HISTORIER FRA FÆLLESSKABET</span><span>KUN GODKENDTE HISTORIER</span></div>
+<div class="stories-feed-header"><div><h2 id="stories-feed-title">Historier, der rammer.</h2><p>Læs fortællinger fra fællesskabet, og vis med et like, hvilke der gør indtryk.</p></div><div class="story-sort" role="group" aria-label="Sorter historier"><button type="button" data-sort="new" aria-pressed="true">Nyeste</button><button type="button" data-sort="popular" aria-pressed="false">Mest likede</button></div></div>
+<div id="story-list" class="story-list" aria-live="polite"><p class="stories-empty">Historier åbner snart.</p></div>
+<button id="stories-more" class="stories-more" type="button" hidden>Vis flere historier</button>
+</div></section>
+<section class="stories-end"><div class="wrap"><div class="draft-kicker">FRA HISTORIE TIL MUSIK</div><p>En sætning kan starte en melodi.<br>En historie kan blive til en sang.</p><a class="draft-link" href="../udgivelser/">Udforsk musikken <span class="arrow-icon" aria-hidden="true"></span></a></div></section>
+</main>
+<dialog id="story-confirm" class="story-dialog" aria-labelledby="confirm-title"><div class="dialog-inner"><div class="draft-kicker">SIDSTE BEKRÆFTELSE</div><h2 id="confirm-title">Er du klar til at dele?</h2><p>Din historie sendes anonymt til SYNQ Studios og bliver <strong>ikke offentliggjort, før den er godkendt</strong>.</p><p>Du har bekræftet, at historien ikke indeholder personoplysninger, og at SYNQ må bruge den som inspiration til nye sangtekster og musik, også til udgivelser uden betaling eller kreditering.</p><p class="dialog-reminder">SYNQ skriver og videreudvikler selv de nye værker. Der er ingen garanti for, at din historie bliver til en sang.</p><div class="dialog-actions"><button id="story-cancel" type="button" class="story-secondary">Gå tilbage</button><button id="story-confirm-send" type="button" class="story-primary">Bekræft og indsend</button></div></div></dialog>
 <footer class="footer"><div class="wrap footer-row"><span>© 2026 SYNQ STUDIOS</span><strong>CREATIVE AI. INDEPENDENT SOUND.</strong></div></footer>
 </body></html>
