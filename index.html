@@ -1,327 +1,74 @@
 <!doctype html>
 <html lang="da">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#080807">
-  <meta name="description" content="SYNQ STUDIOS — musik, historier og stemninger uden grænser. Oplev de nyeste udgivelser og følg med.">
-  <meta property="og:title" content="SYNQ STUDIOS — Official">
-  <meta property="og:description" content="Musik uden grænser. Oplev Nav Dilê Min og flere udgivelser fra SYNQ STUDIOS.">
-  <title>SYNQ STUDIOS — Official</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      color-scheme: dark;
-      --black: #080807;
-      --panel: #10100e;
-      --panel2: #151410;
-      --white: #f5f2eb;
-      --muted: #aaa69b;
-      --gold: #c9a96d;
-      --gold-light: #e2c996;
-      --hairline: rgba(224, 199, 150, .22);
-      --serif: "Playfair Display", Georgia, serif;
-      --sans: "DM Sans", Arial, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 88px; background: var(--black); }
-    body {
-      margin: 0; background: var(--black); color: var(--white); font-family: var(--sans);
-      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
-    }
-    a { color: inherit; text-decoration: none; }
-    button, a { -webkit-tap-highlight-color: transparent; }
-    .wrap { width: min(1180px, calc(100% - 64px)); margin-inline: auto; }
-    .topbar {
-      position: sticky; inset: 0 0 auto; z-index: 20; height: 78px;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      background: rgba(8,8,7,.86); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-    }
-    .nav { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: inline-flex; align-items: center; gap: 11px; white-space: nowrap; }
-    .brand-mark { width: 9px; height: 9px; border: 1px solid var(--gold); transform: rotate(45deg); }
-    .brand-name { font-size: 13px; font-weight: 700; letter-spacing: .28em; }
-    .brand-name span { color: var(--gold-light); }
-    .nav-links { display: flex; align-items: center; gap: 33px; color: #d4d0c7; font-size: 12px; letter-spacing: .08em; }
-    .nav-links a { transition: color .2s ease; }
-    .nav-links a:hover { color: var(--gold-light); }
-    .nav-cta { border: 1px solid var(--hairline); padding: 11px 17px; border-radius: 999px; color: var(--gold-light); }
-    .hero {
-      min-height: min(810px, calc(100svh - 78px)); position: relative; overflow: hidden;
-      display: flex; align-items: center; isolation: isolate;
-      background:
-        radial-gradient(ellipse at 77% 42%, rgba(169,131,72,.14), transparent 32%),
-        radial-gradient(ellipse at 59% 112%, rgba(197,169,112,.08), transparent 42%),
-        linear-gradient(110deg, #080807 0%, #0b0b09 55%, #10100d 100%);
-    }
-    .hero::before {
-      content: ""; position: absolute; inset: 0; z-index: -1; opacity: .2;
-      background: repeating-linear-gradient(117deg, transparent 0 82px, rgba(255,255,255,.045) 83px, transparent 84px);
-      mask-image: linear-gradient(90deg, transparent, black 72%);
-    }
-    .hero::after {
-      content: ""; position: absolute; z-index: -1; width: min(62vw, 760px); aspect-ratio: 1; border-radius: 50%;
-      right: -8%; top: 50%; transform: translateY(-50%);
-      border: 1px solid rgba(201,169,109,.18); box-shadow: 0 0 0 58px rgba(201,169,109,.025), 0 0 0 118px rgba(201,169,109,.02);
-      pointer-events: none;
-    }
-    .hero-copy { position: relative; padding: 112px 0 100px; max-width: 850px; }
-    .eyebrow { color: var(--gold-light); text-transform: uppercase; letter-spacing: .28em; font-size: 10px; font-weight: 600; }
-    .hero h1 {
-      margin: 25px 0 22px; font-family: var(--serif); font-weight: 500;
-      font-size: clamp(65px, 10.1vw, 130px); line-height: .91; letter-spacing: -.055em;
-    }
-    .hero h1 span { color: var(--gold-light); font-style: italic; }
-    .hero-lead { max-width: 485px; margin: 0; color: #c4c0b6; font-size: 16px; line-height: 1.8; }
-    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 34px; }
-    .button {
-      min-height: 48px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 12px;
-      border-radius: 999px; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700;
-      transition: transform .2s ease, background .2s ease, border-color .2s ease;
-    }
-    .button:hover { transform: translateY(-2px); }
-    .button-gold { background: var(--gold-light); color: #17130c; }
-    .button-ghost { border: 1px solid rgba(245,242,235,.28); color: var(--white); }
-    .hero-note { margin-top: 74px; display: flex; align-items: center; gap: 13px; color: #969187; text-transform: uppercase; letter-spacing: .2em; font-size: 9px; }
-    .hero-note::before { content: ""; width: 34px; height: 1px; background: var(--gold); }
-    .section { padding: 112px 0; }
-    .section-dark { background: #0d0d0b; border-block: 1px solid rgba(255,255,255,.04); }
-    .section-heading { margin-bottom: 38px; display: flex; justify-content: space-between; align-items: end; gap: 25px; }
-    .section-heading h2 { margin: 13px 0 0; font-family: var(--serif); font-size: clamp(37px, 5.2vw, 63px); font-weight: 500; line-height: 1.05; letter-spacing: -.035em; }
-    .section-heading p { max-width: 350px; margin: 0 0 5px; color: var(--muted); font-size: 13px; line-height: 1.75; }
-    .latest-card {
-      display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(330px, .92fr); min-height: 460px;
-      overflow: hidden; position: relative; border: 1px solid rgba(201,169,109,.58); border-radius: 17px;
-      background: linear-gradient(120deg, #16140f, #0c0c0a 57%, #12110e);
-      box-shadow: 0 24px 80px rgba(0,0,0,.24);
-    }
-    .latest-art {
-      min-height: 460px; position: relative; overflow: hidden; display: grid; place-items: center;
-      background:
-        radial-gradient(ellipse at 50% 43%, rgba(209,184,139,.28), transparent 16%),
-        radial-gradient(ellipse at 50% 48%, rgba(117,91,54,.24), transparent 43%),
-        linear-gradient(145deg, #29251e, #10100e 56%, #19150f);
-    }
-    .latest-art::before, .latest-art::after { content: ""; position: absolute; inset: 11%; border: 1px solid rgba(225,202,158,.22); }
-    .latest-art::after { inset: 17%; border-color: rgba(225,202,158,.12); }
-    .art-orbit {
-      width: min(58%, 285px); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(224,199,150,.46);
-      box-shadow: 0 0 0 22px rgba(224,199,150,.035), 0 0 100px rgba(210,175,116,.13);
-      display: grid; place-items: center; position: relative;
-    }
-    .art-orbit::before { content: ""; width: 66%; aspect-ratio: 1; border: 1px solid rgba(224,199,150,.27); border-radius: 50%; }
-    .art-word { position: absolute; bottom: 12%; left: 0; right: 0; text-align: center; color: #e2c996; font-family: var(--serif); font-size: clamp(20px,3vw,32px); letter-spacing: .04em; text-shadow: 0 3px 28px #000; }
-    .latest-info { padding: clamp(34px, 5vw, 65px); align-self: center; }
-    .latest-info h3 { margin: 20px 0 12px; font: 500 clamp(38px,5vw,62px)/1.03 var(--serif); letter-spacing: -.04em; }
-    .latest-info p { max-width: 400px; color: #b9b4aa; line-height: 1.8; font-size: 14px; }
-    .latest-label { display: inline-flex; align-items: center; gap: 9px; color: var(--gold-light); border: 1px solid rgba(201,169,109,.45); border-radius: 999px; padding: 9px 12px; text-transform: uppercase; letter-spacing: .16em; font-size: 9px; }
-    .latest-label::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--gold-light); }
-    .latest-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
-    .text-link { display: inline-flex; align-items: center; gap: 9px; padding: 13px 17px; border-radius: 999px; border: 1px solid rgba(245,242,235,.2); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; }
-    .text-link.primary { background: var(--gold-light); border-color: var(--gold-light); color: #17130c; }
-    .releases { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 17px; }
-    .release {
-      min-height: 305px; border: 1px solid rgba(255,255,255,.11); border-radius: 13px; overflow: hidden; position: relative;
-      isolation: isolate; display: flex; flex-direction: column; justify-content: end; padding: 24px;
-      background: linear-gradient(155deg, #29271f 0%, #12120f 52%, #090908 100%);
-      transition: border-color .25s ease, transform .25s ease;
-    }
-    .release:hover { border-color: rgba(201,169,109,.65); transform: translateY(-3px); }
-    .release::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .92; background: var(--cover); }
-    .release::after { content: ""; position: absolute; inset: 12px; z-index: -1; border: 1px solid rgba(238,221,187,.18); border-radius: 7px; }
-    .cover-ya { --cover: radial-gradient(ellipse at 50% 32%, #b29a7255, transparent 18%), radial-gradient(ellipse at 80% 21%, #54484c, transparent 28%), linear-gradient(150deg,#28231e,#121312 65%); }
-    .cover-cest { --cover: radial-gradient(ellipse at 25% 26%, #9c846e66, transparent 22%), linear-gradient(135deg,#282321,#14110f 65%); }
-    .cover-jeg { --cover: radial-gradient(ellipse at 73% 24%, #757b7c55, transparent 23%), linear-gradient(145deg,#25292a,#111211 65%); }
-    .cover-yine { --cover: radial-gradient(ellipse at 32% 24%, #876f58aa, transparent 24%), linear-gradient(145deg,#30241d,#11100e 70%); }
-    .cover-efter { --cover: radial-gradient(ellipse at 66% 27%, #a0918370, transparent 21%), linear-gradient(145deg,#282424,#121112 72%); }
-    .cover-seven { --cover: radial-gradient(ellipse at 47% 20%, #78858a55, transparent 25%), linear-gradient(145deg,#20292d,#0e1113 70%); }
-    .release-index { position: absolute; top: 28px; left: 29px; color: rgba(232,211,171,.8); font-size: 9px; letter-spacing: .2em; }
-    .release-meta { color: #cbb98e; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 8px; }
-    .release h3 { margin: 0; font: 500 clamp(25px, 2.7vw, 34px)/1.1 var(--serif); letter-spacing: -.025em; }
-    .release-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 15px; color: #d9d4ca; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
-    .release-link span { color: var(--gold-light); }
-    .follow { text-align: center; padding: 104px 0 112px; background: radial-gradient(ellipse at 50% 0%, rgba(201,169,109,.09), transparent 55%), #0b0b09; }
-    .follow h2 { margin: 14px 0; font: 500 clamp(42px,6vw,72px)/1.05 var(--serif); letter-spacing: -.04em; }
-    .follow p { color: var(--muted); margin: 0 auto; max-width: 480px; line-height: 1.8; font-size: 14px; }
-    .socials { display: flex; justify-content: center; flex-wrap: wrap; gap: 11px; margin-top: 32px; }
-    .social {
-      min-width: 145px; border-radius: 999px; border: 1px solid rgba(201,169,109,.35); padding: 14px 19px;
-      font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; transition: .2s ease;
-    }
-    .social:hover { background: var(--gold-light); border-color: var(--gold-light); color: #17130c; }
-    .social.disabled { color: #77746d; border-color: rgba(255,255,255,.12); cursor: default; }
-    .footer { border-top: 1px solid rgba(255,255,255,.08); padding: 26px 0 calc(26px + env(safe-area-inset-bottom)); color: #918d83; font-size: 10px; letter-spacing: .09em; }
-    .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
-    .footer-brand { color: #d7d1c6; letter-spacing: .2em; font-weight: 700; }
-    @media (max-width: 800px) {
-      .wrap { width: min(100% - 42px, 620px); }
-      .topbar { height: 70px; }
-      .nav-links { gap: 18px; }
-      .nav-links a:first-child { display: none; }
-      .hero { min-height: 700px; min-height: min(790px, calc(100svh - 70px)); }
-      .hero-copy { padding: 90px 0 76px; }
-      .hero::after { width: 95vw; right: -42%; top: 38%; }
-      .section { padding: 82px 0; }
-      .latest-card { grid-template-columns: 1fr; }
-      .latest-art { min-height: 340px; }
-      .latest-info { padding: 35px; }
-      .releases { grid-template-columns: repeat(2,minmax(0,1fr)); }
-      .release { min-height: 275px; }
-    }
-    @media (max-width: 520px) {
-      html { scroll-padding-top: 72px; }
-      .wrap { width: calc(100% - 36px); }
-      .topbar { height: 64px; }
-      .brand { gap: 8px; }
-      .brand-mark { width: 7px; height: 7px; }
-      .brand-name { font-size: 10px; letter-spacing: .23em; }
-      .nav-links { gap: 11px; font-size: 10px; }
-      .nav-links a:nth-child(2) { display: none; }
-      .nav-cta { padding: 9px 12px; font-size: 9px; }
-      .hero { min-height: 690px; min-height: min(760px, calc(100svh - 64px)); }
-      .hero-copy { padding: 75px 0 58px; }
-      .eyebrow { font-size: 9px; letter-spacing: .22em; }
-      .hero h1 { font-size: clamp(57px, 15vw, 78px); margin: 23px 0 19px; }
-      .hero-lead { max-width: 340px; font-size: 14px; line-height: 1.75; }
-      .button { min-height: 46px; padding: 0 17px; font-size: 9px; }
-      .hero-actions { margin-top: 26px; }
-      .hero-note { margin-top: 57px; font-size: 8px; }
-      .section { padding: 70px 0; }
-      .section-heading { display: block; margin-bottom: 25px; }
-      .section-heading h2 { font-size: 42px; }
-      .section-heading p { margin-top: 14px; font-size: 12px; }
-      .latest-art { min-height: 285px; }
-      .art-orbit { width: 54%; }
-      .latest-info { padding: 28px 23px 30px; }
-      .latest-info h3 { font-size: 43px; }
-      .latest-info p { font-size: 13px; }
-      .latest-actions { gap: 8px; }
-      .text-link { font-size: 9px; padding: 12px 14px; }
-      .releases { gap: 10px; }
-      .release { min-height: 238px; padding: 17px; border-radius: 10px; }
-      .release::after { inset: 8px; }
-      .release-index { top: 20px; left: 20px; font-size: 8px; }
-      .release h3 { font-size: clamp(21px, 6vw, 28px); }
-      .release-meta { font-size: 8px; letter-spacing: .13em; }
-      .release-link { margin-top: 12px; font-size: 8px; letter-spacing: .08em; }
-      .follow { padding: 78px 0 82px; }
-      .follow h2 { font-size: 52px; }
-      .follow p { font-size: 13px; }
-      .socials { gap: 9px; }
-      .social { min-width: 0; padding: 13px 16px; font-size: 9px; }
-      .footer { font-size: 9px; line-height: 1.8; }
-      .footer-row { display: block; text-align: center; }
-      .footer-brand { display: block; margin-top: 6px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080807">
+<meta name="description" content="SYNQ STUDIOS — musik, historier og stemninger uden grænser.">
+<meta property="og:title" content="SYNQ STUDIOS — Official">
+<meta property="og:description" content="Oplev udgivelser fra SYNQ STUDIOS.">
+<title>SYNQ STUDIOS — Official</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--black:#080807;--white:#f5f2eb;--muted:#85837e;--gold:#c9a96d;--gold-light:#d9be8b;--line:#292825;--sans:"DM Sans",Arial,sans-serif;--serif:"Playfair Display",Georgia,serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px;background:var(--black)}body{margin:0;background:var(--black);color:var(--white);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(1050px,calc(100% - 64px));margin:auto}
+.topbar{height:78px;position:sticky;top:0;z-index:10;background:rgba(8,8,7,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:14px;font-weight:700;letter-spacing:.29em;white-space:nowrap}.navlinks{display:flex;align-items:center;gap:28px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d4d0c8}.navlinks a{transition:color .2s}.navlinks a:hover{color:var(--gold-light)}.navcta{border:1px solid rgba(201,169,109,.45);border-radius:999px;padding:10px 15px;color:var(--gold-light)}
+.hero{min-height:570px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 78% 48%,rgba(169,131,72,.14),transparent 34%),linear-gradient(110deg,#080807,#10100d)}.hero:after{content:"";position:absolute;width:min(56vw,620px);aspect-ratio:1;border:1px solid rgba(201,169,109,.17);border-radius:50%;right:-8%;top:50%;transform:translateY(-50%);box-shadow:0 0 0 55px rgba(201,169,109,.025),0 0 0 110px rgba(201,169,109,.018)}.hero-copy{position:relative;z-index:1;padding:95px 0;max-width:690px}.eyebrow{font-size:9px;font-weight:600;letter-spacing:.27em;text-transform:uppercase;color:var(--gold-light)}.hero h1{font:500 clamp(57px,9vw,105px)/.96 var(--serif);letter-spacing:-.055em;margin:22px 0}.hero h1 span{font-style:italic;color:var(--gold-light)}.hero p{max-width:450px;color:#b7b3ab;font-size:14px;line-height:1.8;margin:0}.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:27px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.button.gold{color:#17130c;background:var(--gold-light)}.button.outline{border:1px solid #54514a}
+.releases-section{padding:83px 0 100px}.release-heading{padding-bottom:48px;border-bottom:1px solid var(--line)}.release-heading h2{margin:14px 0 22px;font-size:clamp(42px,7vw,66px);line-height:1;font-weight:700;letter-spacing:-.055em}.release-heading p{margin:0;color:var(--muted);font-size:15px;letter-spacing:.02em}
+.track-list{padding-top:0}.track{min-height:144px;display:grid;grid-template-columns:116px minmax(0,1fr) auto;align-items:center;gap:24px;padding:18px 12px;border-bottom:1px solid var(--line);transition:background .2s}.track:not(.featured):hover{background:rgba(255,255,255,.025)}.track.featured{min-height:170px;margin-top:2px;padding:17px 20px;border:2px solid var(--gold);border-radius:18px;background:linear-gradient(105deg,rgba(201,169,109,.08),rgba(201,169,109,.018) 62%,transparent);box-shadow:0 0 0 1px rgba(201,169,109,.08)}
+.cover{width:104px;aspect-ratio:1;border-radius:11px;overflow:hidden;position:relative;background:#161613;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}.cover:before{content:"";position:absolute;inset:0;background:var(--scene);filter:saturate(.78)}.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 24%,rgba(0,0,0,.26) 58%,rgba(0,0,0,.58)),repeating-linear-gradient(118deg,transparent 0 13px,rgba(255,255,255,.018) 14px,transparent 15px)}.cover-nav{--scene:radial-gradient(ellipse at 57% 56%,#f5d49b 0 2%,#b88a50 4%,transparent 10%),radial-gradient(ellipse at 53% 61%,#59432d 1%,transparent 28%),linear-gradient(180deg,#121a21 0%,#202629 41%,#07090a 100%)}.cover-ya{--scene:linear-gradient(90deg,transparent 0 22%,#090d0e 23% 28%,transparent 29% 60%,#101416 61% 70%,transparent 71%),linear-gradient(180deg,#0b1114 0 40%,#414138 41%,#171613 100%),radial-gradient(ellipse at 75% 48%,#c49a5a,transparent 10%)}.cover-cest{--scene:radial-gradient(ellipse at 72% 52%,#ffd782 0 4%,#f89a43 9%,transparent 22%),linear-gradient(180deg,#28343a 0%,#bd6840 47%,#e9a054 59%,#30251c 80%,#11110e)}.cover-jeg{--scene:radial-gradient(ellipse at 72% 34%,#b49a6a 0 2%,transparent 10%),linear-gradient(180deg,#18202a 0%,#37434a 47%,#131718 49% 52%,#080a0b 100%)}.cover-yine{--scene:radial-gradient(ellipse at 48% 49%,#ffe18d 0 2%,transparent 6%),radial-gradient(ellipse at 72% 58%,#cb873d 0 3%,transparent 9%),linear-gradient(180deg,#07101d 0%,#122236 52%,#171a1b 54%,#08090a)}.cover-efter{--scene:radial-gradient(ellipse at 50% 40%,#ff9d58 0 3%,transparent 10%),linear-gradient(180deg,#25232b 0%,#7c3c34 42%,#e18155 53%,#211a19 73%,#0a0b0c)}.cover-seven{--scene:radial-gradient(ellipse at 53% 36%,#d8be89 0 3%,transparent 11%),linear-gradient(180deg,#101922 0%,#36424a 45%,#171b1d 58%,#08090b)}
+.track-copy{min-width:0}.track h3{margin:0 0 10px;font-size:clamp(19px,2.6vw,27px);font-weight:700;letter-spacing:-.035em;line-height:1.2}.track-meta{color:var(--muted);font-size:12px;letter-spacing:.17em;text-transform:uppercase}.featured .track-meta{color:var(--gold-light);font-weight:700}.listen{padding:14px 4px 14px 18px;color:var(--gold-light);font-size:13px;font-weight:700;letter-spacing:.18em;white-space:nowrap}.listen:hover{color:#f2dda9}.follow{padding:75px 0 80px;background:#0d0d0b;border-top:1px solid rgba(255,255,255,.04);text-align:center}.follow h2{font:500 clamp(35px,5vw,55px)/1.1 var(--serif);margin:13px 0}.follow p{color:var(--muted);font-size:13px;line-height:1.7;margin:0 auto;max-width:430px}.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:26px}.social{min-width:125px;border:1px solid rgba(201,169,109,.38);border-radius:999px;padding:13px 18px;color:#e7dbbf;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.social:hover{background:var(--gold-light);color:#17130c}.social.disabled{color:#77746d;border-color:#33312d}
+.footer{padding:24px 0 calc(24px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:#89867e;font-size:10px;letter-spacing:.13em}.footer-row{display:flex;justify-content:space-between;gap:18px}.footer strong{color:#e0dbd2;letter-spacing:.19em}
+@media(max-width:650px){.wrap{width:calc(100% - 36px)}.topbar{height:66px}.brand{font-size:12px;letter-spacing:.26em}.navlinks{gap:12px;font-size:9px}.navlinks a:first-child{display:none}.navcta{padding:9px 12px}.hero{min-height:525px;min-height:min(600px,calc(82svh - 66px))}.hero-copy{padding:77px 0 68px}.hero:after{width:94vw;right:-50%;top:39%}.hero h1{font-size:clamp(54px,14vw,76px);margin:19px 0}.hero p{font-size:13px;max-width:330px}.hero-actions{margin-top:22px}.button{min-height:42px;font-size:8px;padding:0 14px}.releases-section{padding:60px 0 72px}.release-heading{padding-bottom:34px}.release-heading h2{font-size:42px;margin:13px 0 16px}.release-heading p{font-size:13px}.track{min-height:128px;grid-template-columns:78px minmax(0,1fr) auto;gap:15px;padding:14px 7px}.track.featured{min-height:130px;padding:12px 11px;border-radius:17px;margin-top:0}.cover{width:76px;border-radius:9px}.track h3{font-size:18px;margin-bottom:8px}.track-meta{font-size:9px;letter-spacing:.14em}.listen{font-size:10px;letter-spacing:.12em;padding:12px 1px 12px 5px}.follow{padding:61px 0 65px}.follow h2{font-size:42px}.social{min-width:0;padding:12px 14px;font-size:9px}.footer{font-size:9px;line-height:1.8}.footer-row{display:block;text-align:center}.footer strong{display:block;margin-top:5px}}
+@media(max-width:370px){.wrap{width:calc(100% - 28px)}.track{grid-template-columns:66px minmax(0,1fr) auto;gap:11px}.cover{width:64px}.track h3{font-size:16px}.track-meta{font-size:8px}.listen{font-size:9px}.track.featured{padding-inline:8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="SYNQ STUDIOS — forsiden">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-name">SYNQ <span>STUDIOS</span></span>
-      </a>
-      <nav class="nav-links" aria-label="Hovedmenu">
-        <a href="#udgivelser">Udgivelser</a>
-        <a href="#seneste">Seneste</a>
-        <a class="nav-cta" href="#foelg">Følg os <span aria-hidden="true">↗</span></a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="wrap">
-        <div class="hero-copy">
-          <div class="eyebrow">Independent sound · Est. 2026</div>
-          <h1>Musik uden<br><span>grænser.</span></h1>
-          <p class="hero-lead">Et univers af melodier, stemninger og historier på tværs af sprog og kulturer. Velkommen til SYNQ STUDIOS.</p>
-          <div class="hero-actions">
-            <a class="button button-gold" href="#udgivelser">Udforsk udgivelser <span aria-hidden="true">↘</span></a>
-            <a class="button button-ghost" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer">Besøg YouTube <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="hero-note">Sange skabt til at kunne mærkes</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="seneste">
-      <div class="wrap">
-        <div class="section-heading">
-          <div><div class="eyebrow">Fremhævet udgivelse</div><h2>Seneste udgivelse</h2></div>
-          <p>Et nyt kapitel fra SYNQ STUDIOS. Lyt til den seneste udgivelse på YouTube.</p>
-        </div>
-        <article class="latest-card">
-          <div class="latest-art" aria-label="Abstrakt guldgrafik for Nav Dilê Min" role="img">
-            <div class="art-orbit"><div class="art-word">Nav Dilê Min</div></div>
-          </div>
-          <div class="latest-info">
-            <span class="latest-label">Nyeste udgivelse</span>
-            <h3>Nav Dilê Min</h3>
-            <p>En stemningsfuld fortælling fra SYNQ STUDIOS — hvor dansk møder Kurmanji i et moderne musikunivers.</p>
-            <div class="latest-actions">
-              <a class="text-link primary" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Nav+Dil%C3%AA+Min" target="_blank" rel="noopener noreferrer">Lyt på YouTube <span aria-hidden="true">↗</span></a>
-              <a class="text-link" href="#udgivelser">Se alle udgivelser <span aria-hidden="true">↓</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="udgivelser">
-      <div class="wrap">
-        <div class="section-heading">
-          <div><div class="eyebrow">Udvalgt katalog</div><h2>Udgivelser</h2></div>
-          <p>Find en sang, bliv i stemningen, og udforsk SYNQ STUDIOS på YouTube.</p>
-        </div>
-        <div class="releases">
-          <a class="release cover-ya" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Ya+Layali" target="_blank" rel="noopener noreferrer" aria-label="Find Ya Layali på YouTube">
-            <span class="release-index">01 / SYNQ STUDIOS</span><span class="release-meta">Udgivelse</span><h3>Ya Layali</h3><span class="release-link">Find på YouTube <span>↗</span></span>
-          </a>
-          <a class="release cover-cest" href="https://www.youtube.com/results?search_query=SYNQ+Studios+C%27est+La+Vie" target="_blank" rel="noopener noreferrer" aria-label="Find C’est La Vie på YouTube">
-            <span class="release-index">02 / SYNQ STUDIOS</span><span class="release-meta">Udgivelse</span><h3>C’est La Vie</h3><span class="release-link">Find på YouTube <span>↗</span></span>
-          </a>
-          <a class="release cover-jeg" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Jeg+Sagde+Det+Fint" target="_blank" rel="noopener noreferrer" aria-label="Find Jeg Sagde Det Fint på YouTube">
-            <span class="release-index">03 / SYNQ STUDIOS</span><span class="release-meta">Udgivelse</span><h3>Jeg Sagde<br>Det Fint</h3><span class="release-link">Find på YouTube <span>↗</span></span>
-          </a>
-          <a class="release cover-yine" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Yine" target="_blank" rel="noopener noreferrer" aria-label="Find Yine på YouTube">
-            <span class="release-index">04 / SYNQ STUDIOS</span><span class="release-meta">Udgivelse</span><h3>Yine</h3><span class="release-link">Find på YouTube <span>↗</span></span>
-          </a>
-          <a class="release cover-efter" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Efter+Solnedgang" target="_blank" rel="noopener noreferrer" aria-label="Find Efter Solnedgang på YouTube">
-            <span class="release-index">05 / SYNQ STUDIOS</span><span class="release-meta">Udgivelse</span><h3>Efter<br>Solnedgang</h3><span class="release-link">Find på YouTube <span>↗</span></span>
-          </a>
-          <a class="release cover-seven" href="https://www.youtube.com/results?search_query=SYNQ+Studios+%C5%9Eev%C3%AAn+Dir%C3%AAj" target="_blank" rel="noopener noreferrer" aria-label="Find Şevên Dirêj på YouTube">
-            <span class="release-index">06 / SYNQ STUDIOS</span><span class="release-meta">Lange Nætter</span><h3>Şevên<br>Dirêj</h3><span class="release-link">Find på YouTube <span>↗</span></span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="follow" id="foelg">
-      <div class="wrap">
-        <div class="eyebrow">Følg med</div>
-        <h2>Hold forbindelsen.</h2>
-        <p>Følg SYNQ STUDIOS for nye udgivelser, videoer og glimt fra musikuniverset.</p>
-        <div class="socials">
-          <a class="social" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
-          <a class="social" href="https://www.instagram.com/synqstudiosofficial/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-          <span class="social disabled" aria-label="TikTok-profil tilføjes snart">TikTok · snart</span>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap footer-row">
-      <span>© 2026 SYNQ STUDIOS</span>
-      <span class="footer-brand">MUSIK UDEN GRÆNSER</span>
-    </div>
-  </footer>
+<header class="topbar"><div class="wrap nav">
+<a class="brand" href="#top" aria-label="SYNQ STUDIOS — forsiden">SYNQ STUDIOS</a>
+<nav class="navlinks" aria-label="Hovedmenu"><a href="#udgivelser">Udgivelser</a><a class="navcta" href="#foelg">Følg os</a></nav>
+</div></header>
+<main id="top">
+<section class="hero"><div class="wrap"><div class="hero-copy">
+<div class="eyebrow">Independent sound · Est. 2026</div>
+<h1>Musik uden<br><span>grænser.</span></h1>
+<p>Et univers af melodier, stemninger og historier på tværs af sprog og kulturer. Velkommen til SYNQ STUDIOS.</p>
+<div class="hero-actions"><a class="button gold" href="#udgivelser">Udforsk udgivelser</a><a class="button outline" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer">Besøg YouTube</a></div>
+</div></div></section>
+<section class="releases-section" id="udgivelser"><div class="wrap">
+<div class="release-heading"><div class="eyebrow">SYNQ STUDIOS · 2026</div><h2>Udgivelser</h2><p>SYNQ Studios · 2026</p></div>
+<div class="track-list">
+<a class="track featured" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Nav+Dil%C3%AA+Min" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Nav Dilê Min på YouTube">
+<span class="cover cover-nav" role="img" aria-label="Mørkt cover med lys over horisonten"></span><span class="track-copy"><h3>Nav Dilê Min</h3><span class="track-meta">Seneste udgivelse</span></span><span class="listen">LYT ↗</span>
+</a>
+<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Ya+Layali" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Ya Layali på YouTube">
+<span class="cover cover-ya" role="img" aria-label="Mørkt rum med varmt lys"></span><span class="track-copy"><h3>Ya Layali</h3><span class="track-meta">SYNQ STUDIOS</span></span><span class="listen">LYT ↗</span>
+</a>
+<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+C%27est+La+Vie" target="_blank" rel="noopener noreferrer" aria-label="Lyt til C’est La Vie på YouTube">
+<span class="cover cover-cest" role="img" aria-label="Solnedgang ved havet"></span><span class="track-copy"><h3>C’est La Vie</h3><span class="track-meta">SYNQ STUDIOS</span></span><span class="listen">LYT ↗</span>
+</a>
+<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Jeg+Sagde+Det+Fint" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Jeg Sagde Det Fint på YouTube">
+<span class="cover cover-jeg" role="img" aria-label="Regnfuld nat ved vandet"></span><span class="track-copy"><h3>Jeg Sagde Det Fint</h3><span class="track-meta">SYNQ STUDIOS</span></span><span class="listen">LYT ↗</span>
+</a>
+<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Yine" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Yine på YouTube">
+<span class="cover cover-yine" role="img" aria-label="Gyldne lys spejlet i regnvåd gade"></span><span class="track-copy"><h3>Yine</h3><span class="track-meta">SYNQ STUDIOS</span></span><span class="listen">LYT ↗</span>
+</a>
+<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+Efter+Solnedgang" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Efter Solnedgang på YouTube">
+<span class="cover cover-efter" role="img" aria-label="Rødlig himmel efter solnedgang"></span><span class="track-copy"><h3>Efter Solnedgang</h3><span class="track-meta">SYNQ STUDIOS</span></span><span class="listen">LYT ↗</span>
+</a>
+<a class="track" href="https://www.youtube.com/results?search_query=SYNQ+Studios+%C5%9Eev%C3%AAn+Dir%C3%AAj" target="_blank" rel="noopener noreferrer" aria-label="Lyt til Şevên Dirêj på YouTube">
+<span class="cover cover-seven" role="img" aria-label="Blågrå nattehimmel"></span><span class="track-copy"><h3>Şevên Dirêj</h3><span class="track-meta">Lange Nætter</span></span><span class="listen">LYT ↗</span>
+</a>
+</div></div></section>
+<section class="follow" id="foelg"><div class="wrap"><div class="eyebrow">Følg med</div><h2>Hold forbindelsen.</h2><p>Følg SYNQ STUDIOS for nye udgivelser, videoer og glimt fra musikuniverset.</p><div class="socials">
+<a class="social" href="https://www.youtube.com/@SYNQ_STUDIOS" target="_blank" rel="noopener noreferrer">YouTube</a>
+<a class="social" href="https://www.instagram.com/synqstudiosofficial/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<span class="social disabled" aria-label="TikTok-profil tilføjes snart">TikTok · snart</span>
+</div></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-row"><span>© 2026 SYNQ STUDIOS</span><strong>MUSIK UDEN GRÆNSER</strong></div></footer>
 </body>
 </html>
