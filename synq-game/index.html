@@ -1,16 +1,62 @@
 <!doctype html>
-<html lang="da"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#080807"><meta name="description" content="Et nyt, interaktivt projekt i SYNQ-universet.">
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080807">
+<meta name="description" content="Spil SYNQ: ram bogstaverne, find rytmen, og test din timing i dagens challenge. Et spil fra SYNQ STUDIOS.">
 <title>SYNQ Game — SYNQ STUDIOS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/sections.css"><link rel="stylesheet" href="../assets/site-menu.css">
+<link rel="stylesheet" href="../assets/sections.css">
+<link rel="stylesheet" href="../assets/site-menu.css">
 <script src="../assets/site-menu.js" defer></script>
-</head><body>
+<style>
+.game-intro{padding:74px 0 94px}
+.game-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.86fr);gap:44px;align-items:center}
+.game-kicker{font-size:11px;font-weight:750;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.game-feature h2{font-size:clamp(38px,5.8vw,68px);letter-spacing:-.075em;line-height:1.07;margin:18px 0 20px}
+.game-feature h2 span{color:var(--gold)}
+.game-description{font-size:16px;line-height:1.9;color:#b7b1a6;max-width:490px;margin:0}
+.game-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:57px;margin-top:30px;padding:0 27px;border:1px solid var(--gold);border-radius:5px;background:var(--gold);color:#0b0a08;font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;transition:background .2s,color .2s}
+.game-cta:hover{background:transparent;color:var(--gold-light)}
+.game-cta:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.game-small{font-size:12px;color:#89847b;line-height:1.8;margin-top:19px;max-width:470px}
+.game-art{position:relative;min-height:375px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:30px;overflow:hidden;border:1px solid rgba(201,169,109,.25);border-radius:18px;background:radial-gradient(circle at 50% 50%,rgba(201,169,109,.11),transparent 52%),linear-gradient(135deg,#15130f,#090909 72%)}
+.game-art::before,.game-art::after{content:"";position:absolute;width:310px;height:310px;border:1px solid rgba(201,169,109,.12);border-radius:50%;pointer-events:none}
+.game-art::after{width:235px;height:235px;border-color:rgba(201,169,109,.17)}
+.game-art-title{z-index:1;font-size:10px;letter-spacing:.35em;color:var(--gold);font-weight:800}
+.game-letters{z-index:1;display:flex;align-items:center;justify-content:center;gap:11px}
+.game-letters span{width:58px;height:68px;display:grid;place-items:center;border:1px solid #4a4132;border-radius:10px;background:rgba(12,11,10,.85);color:#f7f3ec;font-size:35px;font-weight:900;box-shadow:0 12px 35px rgba(0,0,0,.3)}
+.game-letters span:last-child{color:var(--gold-light);border-color:var(--gold)}
+.game-art-sub{z-index:1;color:#999084;font-size:11px;letter-spacing:.17em;text-transform:uppercase}
+.game-steps{margin-top:60px;padding-top:27px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.game-step-num{font-size:11px;color:var(--gold);font-weight:800;letter-spacing:.17em}
+.game-steps h3{font-size:18px;margin:13px 0 8px;letter-spacing:-.025em}
+.game-steps p{font-size:13px;line-height:1.8;color:#a6a096;margin:0}
+@media(max-width:760px){.game-intro{padding:48px 0 70px}.game-feature{grid-template-columns:1fr;gap:35px}.game-feature h2{font-size:clamp(37px,10vw,56px)}.game-description{font-size:14px}.game-art{min-height:280px}.game-letters span{width:52px;height:62px;font-size:30px}.game-steps{grid-template-columns:1fr;gap:21px;margin-top:42px}.game-steps>div{padding-bottom:19px;border-bottom:1px solid var(--line)}}
+@media(max-width:360px){.game-letters{gap:7px}.game-letters span{width:47px;height:58px}}
+</style>
+</head>
+<body>
 <a class="skip" href="#main">Spring til indhold</a>
 <header class="topbar"><div class="wrap nav"><a class="brand" href="../" aria-label="SYNQ STUDIOS — forside">SYNQ STUDIOS</a><nav class="navlinks" aria-label="Hovedmenu"><a class="navcta" href="../#foelg">Følg os</a><details class="site-menu"><summary class="site-menu-toggle" aria-label="Åbn menu"><span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span></summary><div class="site-menu-panel" aria-label="Sidemenu"><a href="../">Forside</a><a href="../om-synq/">Om SYNQ</a><a href="../udgivelser/">Udgivelser</a><a href="../synq-game/" aria-current="page">SYNQ Game</a></div></details></nav></div></header>
-<main id="main"><section class="page-hero"><div class="wrap"><div class="eyebrow">DET NÆSTE KAPITEL</div><h1>SYNQ Game<span class="gold-dot">.</span></h1><p>Et nyt, interaktivt projekt i SYNQ-universet.</p></div></section>
-<section class="page-content"><div class="wrap"><div class="draft-panel"><div class="draft-kicker">UNDER UDVIKLING</div><h2>Noget nyt er på vej</h2><p>SYNQ Game får sit eget univers her. Vi bygger oplevelsen videre, inden den bliver lanceret.</p><a class="draft-link" href="../">Tilbage til forsiden <span class="arrow-icon" aria-hidden="true"></span></a></div></div></section></main>
+<main id="main">
+<section class="page-hero"><div class="wrap"><div class="eyebrow">INTERAKTIVT · SYNQ STUDIOS</div><h1>SYNQ Game<span class="gold-dot">.</span></h1><p>Musik handler om timing. Hvor god er din?</p></div></section>
+<section class="game-intro"><div class="wrap">
+<div class="game-feature">
+<div><div class="game-kicker">01 / SYNQ TIMING CHALLENGE</div><h2>ARE YOU<br>IN <span>SYNQ?</span></h2><p class="game-description">Ram S, Y, N og Q, mens bogstaverne snurrer. Find rytmen, stop uret så tæt på dagens mål som muligt, og prøv at mestre den blinde udfordring.</p><a class="game-cta" href="./play/">SPIL NU <span aria-hidden="true">↗</span></a><p class="game-small">Gratis at spille. Ingen konto nødvendig. Spillet åbner på SYNQ Studios' egen hjemmeside.</p></div>
+<div class="game-art" aria-hidden="true"><div class="game-art-title">SYNQ / GAMES</div><div class="game-letters"><span>S</span><span>Y</span><span>N</span><span>Q</span></div><div class="game-art-sub">FIND YOUR RHYTHM</div></div>
+</div>
+<div class="game-steps">
+<div><div class="game-step-num">LEVEL 01</div><h3>Find bogstaverne</h3><p>Stop det snurrende alfabet på S, Y, N og Q. Hold fokus hele vejen.</p></div>
+<div><div class="game-step-num">LEVEL 02</div><h3>Master Timing</h3><p>Start og stop uret så tæt på dagens mål som muligt.</p></div>
+<div><div class="game-step-num">LEVEL 03</div><h3>Blind Master</h3><p>Uret forsvinder undervejs. Her er det kun din indre rytme, der tæller.</p></div>
+</div>
+<p class="game-small" style="margin-top:34px">Bemærk: Ranglisten i denne version gemmes lokalt i din browser og er ikke en fælles rangliste for alle spillere.</p>
+</div></section>
+</main>
 <footer class="footer"><div class="wrap footer-row"><span>© 2026 SYNQ STUDIOS</span><strong>CREATIVE AI. INDEPENDENT SOUND.</strong></div></footer>
-</body></html>
+</body>
+</html>
