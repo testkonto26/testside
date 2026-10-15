@@ -6,10 +6,10 @@
 <header class="topbar"><div class="wrap nav"><a class="brand" href="../">SYNQ STUDIOS</a><div class="navright"><a class="back" href="../">← Forside</a><details class="site-menu"><summary class="site-menu-toggle" aria-label="Åbn menu"><span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span></summary><div class="site-menu-panel"><a href="../">Forside</a><a href="../om-synq/">Om SYNQ</a><a href="../udgivelser/">Udgivelser</a><a href="../synq-game/">SYNQ Game</a><a href="./" aria-current="page">Invitation Studio</a></div></details></div></div></header>
 <main class="wrap"><section class="intro"><div class="eyebrow">SYNQ STUDIOS / CREATIVE TOOLS</div><h1>Invitation Studio.</h1><p>Lav din egen invitation på få minutter. Tilpas teksten, vælg design, og download den direkte – helt gratis i denne test.</p></section>
 <div class="layout"><section class="panel" aria-label="Redigér invitation"><h2>Design din invitation</h2>
-<div class="field"><label for="theme">Design</label><select id="theme"><option value="floral">Sage Watercolor – Klassisk</option><option value="gold">Black & Gold – Eksklusiv</option><option value="minimal">Minimal – Creme</option><option value="night">Midnight – Blå</option></select></div>
+<div class="field"><label for="theme">Design</label><select id="theme"><option value="floral">Reference – Konfirmation</option><option value="gold">Black & Gold – Eksklusiv</option><option value="minimal">Minimal – Creme</option><option value="night">Midnight – Blå</option></select></div>
 <div class="field"><label for="event">Anledning</label><select id="event"><option>Konfirmation</option><option>Fødselsdag</option><option>Bryllup</option><option>Barnedåb</option><option>Babyshower</option><option>Fest</option><option>Jubilæum</option></select></div>
 <div class="field"><label for="name">Navn / overskrift</label><input id="name" maxlength="70" value="Jonas Larsen"></div>
-<div class="cols"><div class="field"><label for="date">Dato</label><input id="date" type="date" value="2026-11-14"></div><div class="field"><label for="time">Klokkeslæt</label><input id="time" type="time" value="17:00"></div></div>
+<div class="cols"><div class="field"><label for="date">Dato</label><input id="date" type="date" value="2028-04-14"></div><div class="field"><label for="time">Klokkeslæt</label><input id="time" type="time" value="17:00"></div></div>
 <div class="field"><label for="place">Sted / adresse</label><input id="place" maxlength="100" value="Vor Frue Kirke, Odense"></div>
 <div class="field"><label for="message">Personlig hilsen</label><textarea id="message" maxlength="280">Efter ceremonien inviteres du til frokost i Bakkedalens Forsamlingshus. Vi glæder os til at se dig!</textarea></div>
 <div class="field"><label for="rsvp">Svar senest (valgfrit)</label><input id="rsvp" maxlength="90" value="Svar senest 7. august" placeholder="F.eks. Svar senest 1. november"></div>
@@ -32,35 +32,51 @@ function watercolor(bg){ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
 for(let i=0;i<65;i++){const x=((i*297+91)%1580)-180,y=((i*491+47)%2150)-200,r=135+(i%7)*41;ctx.save();ctx.translate(x,y);ctx.scale(1,.75+(i%4)*.12);const g=ctx.createRadialGradient(0,0,r*.09,0,0,r);g.addColorStop(0,i%3===0?'rgba(103,148,128,.13)':'rgba(151,175,156,.10)');g.addColorStop(.6,'rgba(115,160,140,.055)');g.addColorStop(1,'rgba(115,160,140,0)');ctx.fillStyle=g;ctx.beginPath();ctx.arc(0,0,r,0,Math.PI*2);ctx.fill();ctx.restore();}
 for(let i=0;i<1500;i++){const x=(i*7919)%W,y=(i*4567)%H;ctx.fillStyle=i%2?'rgba(70,78,62,.026)':'rgba(255,255,255,.12)';ctx.fillRect(x,y,2,2)}
 }
+function figure(){
+ctx.save();ctx.translate(257,885);ctx.scale(1.18,1.18);
+ctx.strokeStyle='#4b4440';ctx.lineWidth=2.4;
+function shape(fill,pts){ctx.fillStyle=fill;ctx.beginPath();ctx.moveTo(...pts[0]);for(let i=1;i<pts.length;i++)ctx.lineTo(...pts[i]);ctx.closePath();ctx.fill();ctx.stroke()}
+shape('#242523',[[-63,242],[-24,205],[16,215],[52,270],[38,417],[4,520],[-19,520],[-42,372]]);
+shape('#32322f',[[28,245],[59,276],[72,394],[45,414],[10,354]]);
+shape('#e9e8df',[[-50,80],[22,65],[58,123],[36,290],[26,337],[-48,332],[-61,184]]);
+shape('#eee9db',[[-54,108],[-83,182],[-62,251],[-37,239],[-40,160]]);
+shape('#3a3a36',[[36,91],[58,128],[69,216],[51,260],[34,243],[34,149]]);
+ctx.fillStyle='#c3a18b';ctx.beginPath();ctx.ellipse(-12,28,34,45,-.08,0,Math.PI*2);ctx.fill();
+shape('#342521',[[-49,17],[-37,-29],[-7,-44],[25,-22],[27,6],[5,-1],[-18,4]]);
+ctx.fillStyle='#1b1b1b';ctx.beginPath();ctx.roundRect(-35,17,27,16,7);ctx.roundRect(-4,16,28,16,7);ctx.fill();ctx.strokeStyle='#262626';ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(-8,20);ctx.lineTo(-4,20);ctx.stroke();
+ctx.strokeStyle='#988f85';ctx.beginPath();ctx.moveTo(-21,82);ctx.lineTo(-12,172);ctx.lineTo(7,82);ctx.stroke();
+shape('#d9bdab',[[-70,199],[-57,183],[-48,192],[-43,225],[-54,239],[-67,224]]);
+ctx.strokeStyle='#272727';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(-54,187);ctx.lineTo(-40,113);ctx.stroke();
+ctx.restore();
+}
 function draw(){
-const theme=els.theme.value, schemes={gold:{bg:'#171611',fg:'#f5ebdb',accent:'#caa96a',sub:'#cbbda7'},floral:{bg:'#f6f6ef',fg:'#222824',accent:'#647d68',sub:'#47584c'},minimal:{bg:'#f8f2e9',fg:'#282623',accent:'#aa8b67',sub:'#71685d'},night:{bg:'#112039',fg:'#f1f4fa',accent:'#b2cadb',sub:'#d0d9e4'}},s=schemes[theme],cx=W/2,serif='"Playfair Display", Georgia, serif',script='"Caveat", "Brush Script MT", cursive';
+const theme=els.theme.value,simple=theme!=='floral';
+const schemes={gold:{bg:'#14120e',fg:'#f4eadb',accent:'#caa96a'},floral:{bg:'#f5f6f1',fg:'#141513',accent:'#728f80'},minimal:{bg:'#f8f2e9',fg:'#2b2520',accent:'#ab9475'},night:{bg:'#0c1930',fg:'#f2f2f4',accent:'#a3bcd2'}};
+const s=schemes[theme],serif='"Playfair Display", Georgia, serif',script='"Caveat", cursive';
 ctx.clearRect(0,0,W,H);
-if(theme==='floral'){watercolor(s.bg);
-ctx.strokeStyle='rgba(72,108,82,.15)';ctx.lineWidth=2;ctx.strokeRect(53,53,W-106,H-106);
-botanical(178,443,-.62,1.12,'rgba(65,106,75,.26)');
-botanical(1084,420,.72,1.10,'rgba(65,106,75,.26)');
-botanical(150,1650,-2.35,.95,'rgba(65,106,75,.25)');
-botanical(1070,1620,2.3,.95,'rgba(65,106,75,.25)');
-const glow=ctx.createRadialGradient(cx,870,100,cx,870,710);glow.addColorStop(0,'rgba(255,255,251,.92)');glow.addColorStop(1,'rgba(255,255,251,0)');ctx.fillStyle=glow;ctx.fillRect(90,150,1060,1470);
-}else{ctx.fillStyle=s.bg;ctx.fillRect(0,0,W,H);ctx.strokeStyle=s.accent;ctx.globalAlpha=.37;ctx.lineWidth=2;ctx.strokeRect(62,62,W-124,H-124);ctx.globalAlpha=1;
-if(theme==='gold'){for(let i=0;i<6;i++){ctx.strokeStyle='rgba(195,158,95,'+(.15-i*.018)+')';ctx.beginPath();ctx.arc(cx,230,125+i*28,Math.PI*1.14,Math.PI*1.86);ctx.stroke();}}
-if(theme==='night'){for(let i=0;i<65;i++){ctx.fillStyle='rgba(207,224,240,.25)';ctx.fillRect(100+(i*197)%1040,100+(i*317)%1550,2,2)}}}
-text('K Æ R E',cx,232,'500 34px '+serif,s.fg);
-text('I ANLEDNING AF MIN',cx,337,'500 33px '+serif,s.fg);
-const occasion=els.event.value;let sz=occasion.length>13?125:occasion.length>9?153:190;ctx.font='500 '+sz+'px '+script;while(ctx.measureText(occasion).width>990&&sz>75){sz-=3;ctx.font='500 '+sz+'px '+script}
-text(occasion,cx,548,'500 '+sz+'px '+script,s.fg);
-ornament(631,s.accent);
-text('VIL DET GLÆDE MIG AT SE DIG / JER',cx,730,'500 32px '+serif,s.fg);
-const name=els.name.value.trim()||'Jonas Larsen';let ns=name.length>22?95:118;ctx.font='600 '+ns+'px '+script;while(ctx.measureText(name).width>910&&ns>53){ns-=3;ctx.font='600 '+ns+'px '+script}
-text(name,cx,877,'600 '+ns+'px '+script,s.fg);
-ornament(936,s.accent);
-const date=els.date.value?new Date(els.date.value+'T12:00:00'):null,ds=date&&!isNaN(date)?new Intl.DateTimeFormat('da-DK',{day:'numeric',month:'long',year:'numeric'}).format(date).toUpperCase():'VÆLG DATO';
-text(ds,cx,1031,'600 47px '+serif,s.fg);
-text('KL. '+(els.time.value||'--:--'),cx,1116,'500 32px '+serif,s.sub);
-let y=block(els.place.value.trim()||'Sted og adresse',1216,'500 30px '+serif,s.fg,48,880,3);
-y=block(els.message.value,Math.max(1355,y+55),'400 30px '+serif,s.fg,47,875,4);
-if(els.rsvp.value.trim())block(els.rsvp.value,Math.max(1580,y+42),'400 26px '+serif,s.sub,35,900,2);
-text('✦',cx,1695,'29px Georgia, serif',s.accent);
+if(!simple){
+ctx.fillStyle='#f0f2ed';ctx.fillRect(0,0,W,H);
+for(let i=0;i<58;i++){const x=(i*337+29)%1500-140,y=(i*473+101)%2030-140,r=170+(i%6)*47;const g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,i%3===0?'rgba(105,150,136,.16)':'rgba(162,176,162,.115)');g.addColorStop(1,'rgba(157,179,161,0)');ctx.fillStyle=g;ctx.fillRect(x-r,y-r,r*2,r*2);}
+const center=ctx.createRadialGradient(650,900,110,650,900,780);center.addColorStop(0,'rgba(255,255,252,.92)');center.addColorStop(1,'rgba(255,255,252,0)');ctx.fillStyle=center;ctx.fillRect(0,0,W,H);
+for(let i=0;i<2600;i++){let x=(i*2837)%W,y=(i*6173)%H;ctx.fillStyle=i%2?'rgba(64,84,69,.018)':'rgba(255,255,255,.20)';ctx.fillRect(x,y,2,2);}
+}else{ctx.fillStyle=s.bg;ctx.fillRect(0,0,W,H)}
+const ink=s.fg;
+text('KÆRE',465,120,'400 31px '+serif,ink,'left');
+text('I ANLEDNING AF MIN',460,225,'400 33px '+serif,ink,'left');
+const occasion=els.event.value;let fs=occasion.length>12?133:171;ctx.font='600 '+fs+'px '+script;while(ctx.measureText(occasion).width>900&&fs>70){fs-=4;ctx.font='600 '+fs+'px '+script}
+text(occasion,620,425,'600 '+fs+'px '+script,ink);
+text('VIL DET GLÆDE MIG AT SE DIG / JER',620,615,'400 32px '+serif,ink);
+if(!simple)figure();
+const d=els.date.value?new Date(els.date.value+'T12:00:00'):null,ds=d&&!isNaN(d)?new Intl.DateTimeFormat('da-DK',{day:'numeric',month:'long',year:'numeric'}).format(d).toUpperCase():'VÆLG DATO';
+text(ds,515,788,'500 51px '+serif,ink,'left');
+const left=515,max=645;
+function leftBlock(v,y,font,space,limit=5){let ls=lines(v,max,font).slice(0,limit);ls.forEach((x,i)=>text(x,left,y+i*space,font,ink,'left'));return y+ls.length*space;}
+let y=leftBlock(els.place.value||'Sted og adresse',873,'400 29px '+serif,43,3);
+text('KL. '+(els.time.value||'--:--'),left,y+10,'400 26px '+serif,ink,'left');
+y=leftBlock(els.message.value,Math.max(1080,y+122),'400 29px '+serif,43,6);
+if(els.rsvp.value.trim())leftBlock(els.rsvp.value,Math.max(1430,y+46),'400 25px '+serif,35,2);
+const name=els.name.value.trim()||'Jonas Larsen';let ns=name.length>17?89:112;ctx.font='600 '+ns+'px '+script;while(ctx.measureText(name).width>570&&ns>45){ns-=3;ctx.font='600 '+ns+'px '+script}
+text(name,520,1635,'600 '+ns+'px '+script,ink,'left');
 }
 ids.forEach(id=>els[id].addEventListener('input',draw));document.fonts.ready.then(draw);draw();
 document.getElementById('png').addEventListener('click',()=>{canvas.toBlob(blob=>{if(!blob)return;const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='invitation-'+(els.name.value.trim().replace(/[^a-zA-Z0-9æøåÆØÅ-]+/g,'-')||'synq')+'.png';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)},'image/png')});
