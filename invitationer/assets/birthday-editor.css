@@ -49,3 +49,10 @@
 .invite-preview[data-theme="botanical"] .preview-address{top:73.7%;font-size:2.35cqw;color:#263026}
 .invite-preview[data-theme="botanical"] .preview-rsvp{top:77.2%;font-size:2.45cqw;letter-spacing:.12em;color:#263026;text-transform:uppercase}
 .invite-preview[data-theme="botanical"] .preview-contact{top:80.5%;font-size:2.25cqw;color:#263026}
+
+/* Final visual alignment against approved product previews */
+.invite-preview[data-theme="champagne"] .preview-age{top:8%;font-size:58cqw}
+.invite-preview[data-theme="champagne"] .preview-name{font-size:8.2cqw}
+.invite-preview[data-theme="midnight"] .preview-age{top:-2%}
+.invite-preview[data-theme="botanical"] .preview-age{top:5%;font-size:56cqw}
+.invite-preview[data-theme="botanical"] .preview-name{font-size:8.5cqw}
