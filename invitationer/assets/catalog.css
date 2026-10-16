@@ -4,3 +4,6 @@
 
 /* Mobile navigation: consistent black icon and dropdown on all catalog, product and editor pages */
 .mobile-toggle{color:#111!important;-webkit-text-fill-color:#111;line-height:1;padding:8px;font-family:Arial,sans-serif;font-weight:700}.mobile-menu{position:relative;z-index:40}.mobile-menu a{display:block;color:#111;background:#fffdfb}.empty-state{margin:34px 0 90px;padding:55px 24px;text-align:center;background:#f7f5ef;border:1px solid #e6e2d8;border-radius:10px}.empty-state h2{font:500 34px "Playfair Display",serif;margin:0 0 10px}.empty-state p{margin:0;color:#777871}
+
+/* Mobile dropdown overlays page content; 90% opaque / 10% transparent */
+@media(max-width:760px){.site-header{position:sticky;top:0;z-index:50}.mobile-menu{position:absolute;top:100%;left:0;right:0;width:100%;max-width:none;margin:0;padding:8px max(20px,calc((100% - 1120px)/2)) 14px;background:rgba(255,253,251,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 12px 28px #00000018}.mobile-menu a{background:transparent;border-top:1px solid #deddd7}}
