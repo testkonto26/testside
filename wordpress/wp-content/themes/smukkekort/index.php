@@ -1,0 +1,1 @@
+<?php if (!defined('ABSPATH')) exit; ?><!doctype html><html <?php language_attributes(); ?>><head><meta charset="<?php bloginfo('charset'); ?>"><?php wp_head(); ?></head><body <?php body_class(); ?>><?php wp_body_open(); ?><main><h1>Smukkekort</h1><?php if(have_posts())while(have_posts()){the_post();the_content();} ?></main><?php wp_footer(); ?></body></html>
